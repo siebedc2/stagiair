@@ -1,1 +1,1 @@
-<h1>Settings student</h1>
+<h1>Instellingen student</h1>

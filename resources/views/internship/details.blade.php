@@ -1,0 +1,1 @@
+<h1>Details stage</h1>

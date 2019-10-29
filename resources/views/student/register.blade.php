@@ -1,1 +1,1 @@
-<h1>Register</h1>
+<h1>Registreer student</h1>

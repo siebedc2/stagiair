@@ -1,1 +1,1 @@
-<h1>Profile student</h1>
+<h1>Profiel student</h1>

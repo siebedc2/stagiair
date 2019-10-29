@@ -15,7 +15,7 @@ class InternshipController extends Controller
     // Show detail page of an internship
     public function details()
     {
-            
+        return view('internship/details');
     }
 
 }

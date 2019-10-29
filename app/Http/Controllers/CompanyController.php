@@ -21,7 +21,7 @@ class CompanyController extends Controller
     // Company register
     public function register()
     {
-        
+        return view('/company/register');
     }
 
     public function handleRegister()
@@ -32,7 +32,7 @@ class CompanyController extends Controller
     // Company login
     public function login()
     {
-        
+        return view('/company/login');
     }
 
     public function handleLogin()
@@ -43,7 +43,7 @@ class CompanyController extends Controller
     // Company profile
     public function profile()
     {
-        
+        return view('company/profile');
     }
 
     // Edit company profile

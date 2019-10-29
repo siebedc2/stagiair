@@ -52,7 +52,7 @@ Route::get('/mijnProfiel/mijnStages', 'StudentController@internships');
 
 // Company register
 Route::get('/bedrijf/register', 'CompanyController@register');
-Route::post('/company/register', 'CompanyController@handleRegister');
+Route::post('/bedrijf/register', 'CompanyController@handleRegister');
 
 // Company login
 Route::get('/bedrijf/login', 'CompanyController@login');
