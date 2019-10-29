@@ -9,7 +9,7 @@ class StudentController extends Controller
     // Student register
     public function register()
     {
-        
+        return view('/student/register');
     }
 
     public function handleRegister()
@@ -20,7 +20,7 @@ class StudentController extends Controller
     // Student login
     public function login()
     {
-        
+        return view('/student/login');
     }
 
     public function handleLogin()
@@ -31,13 +31,13 @@ class StudentController extends Controller
     // Student profile
     public function profile()
     {
-        
+        return view('/student/profile');
     }
 
     // Edit student profile
     public function settings()
     {
-        
+        return view('/student/settings');
     }
 
     // Save edited student profile
