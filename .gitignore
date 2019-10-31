@@ -1,3 +1,4 @@
+.vagrant/machines/
 /node_modules
 /public/hot
 /public/storage
@@ -10,3 +11,11 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+/.vagrant
+/website/.vagrant
+/website/build
+/vagrant-spec.config.rb
+test/vagrant-spec/.vagrant/
+.DS_store
+/machines
+/dist
