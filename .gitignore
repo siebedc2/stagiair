@@ -19,3 +19,4 @@ test/vagrant-spec/.vagrant/
 .DS_store
 /machines
 /dist
+.vagrant/
