@@ -18,4 +18,4 @@ yarn-error.log
 test/vagrant-spec/.vagrant/
 .DS_store
 /machines
-
+/dist
