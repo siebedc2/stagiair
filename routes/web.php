@@ -44,8 +44,8 @@ Route::post('/student/login', 'StudentController@handleLogin');
 Route::get('/mijnProfiel', 'StudentController@profile');
 
 // Edit student profile
-Route::get('/mijnProfiel/settings', 'StudentController@settings');
-Route::post('/mijnProfiel/settings', 'StudentController@change');
+Route::get('/mijnProfiel/instellingen', 'StudentController@settings');
+Route::post('/mijnProfiel/instellingen', 'StudentController@change');
 
 // Student internships
 Route::get('/mijnProfiel/mijnStages', 'StudentController@internships');
@@ -62,8 +62,8 @@ Route::post('/bedrijf/login', 'CompanyController@handleLogin');
 Route::get('/bedrijfsProfiel', 'CompanyController@profile');
 
 // Edit company profile
-Route::get('/bedrijfsProfiel/settings', 'CompanyController@settings');
-Route::post('/bedrijfsProfiel/settings', 'CompanyController@change');
+Route::get('/bedrijfsProfiel/instellingen', 'CompanyController@settings');
+Route::post('/bedrijfsProfiel/instellingen', 'CompanyController@change');
 
 // Company internships
 Route::get('/bedrijfsProfiel/mijnStages', 'CompanyController@internships');
