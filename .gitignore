@@ -1,3 +1,4 @@
+.vagrant/machines/
 /node_modules
 /public/hot
 /public/storage
@@ -10,17 +11,11 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
-.vagrant
+/.vagrant
 /website/.vagrant
 /website/build
 /vagrant-spec.config.rb
 test/vagrant-spec/.vagrant/
 .DS_store
+/machines
 
-.vagrant/machines/stagiair/virtualbox/private_key
-.vagrant/machines/stagiair/virtualbox/action_provision
-.vagrant/machines/stagiair/virtualbox/action_provision
-.vagrant/machines/stagiair/virtualbox/action_set_name
-.vagrant/machines/stagiair/virtualbox/action_set_name
-.vagrant/machines/stagiair/virtualbox/id
-.vagrant/machines/stagiair/virtualbox/vagrant_cwd
