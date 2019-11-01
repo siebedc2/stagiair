@@ -43,7 +43,7 @@ Login
                 <input type="password" name="password" class="form-control" id="password" placeholder="Geef jouw wachtwoord in...">
             </div>
 
-            <button type="submit" class="btn btn-primary">Sign me up</button>
+            <button type="submit" class="btn btn-primary">Registreer</button>
     </div>
 </form>
 
