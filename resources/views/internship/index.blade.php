@@ -1,18 +1,10 @@
 @extends('layouts/internships')
 
-@section('nav')
-    <nav>
-        <a href="/">Home</a>
-        <a href="/internships">Internships</a>
-        <a href="/mystudent/profile">My Profile</a>
-    </nav>
-@endsection
-
 @section('content')
 
     
 
-    <h1>All Internships</h1>
+    <h1>Stages</h1>
 
     @if( $flash = session('message') )
         <div class="alert alert-success">{{ $flash }}</div>

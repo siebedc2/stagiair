@@ -1,19 +1,11 @@
 @extends('layouts/internships')
 
-@section('nav')
-    <nav>
-        <a href="/">Home</a>
-        <a href="/internships">Internships</a>
-        <a href="/mystudent/profile">My Profile</a>
-    </nav>
-@endsection
-
 @section('content')
 
     <h1>Create new Internship</h1>
 
     <!-- form voor het aanmaken van een nieuwe internship door een bedrijf -->
-    <form method="post" action="/internships">
+    <form method="post" action="/stages">
 
         {{ csrf_field() }}
 
@@ -28,6 +20,7 @@
             @endcomponent
         @endif
 
+        <!-- form voor het aanmaken van een stage -->
         <div class="form-group">
             <label for="title">Titel van de stage</label>
             <input value="{{ old('title') }}" type="text" class="form-control" id="title" name="title">
@@ -41,7 +34,7 @@
             <textarea class="form-control" id="requirements" name="requirements" rows="3"></textarea>
         </div>
         <div class="form-group">
-            <label for="offer">Wat heb je als bedrijf te bieden</label>
+            <label for="offer">Wat heb je als bedrijf aan te bieden</label>
             <textarea class="form-control" id="offer" name="offer" rows="3"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Stage aanmaken</button>

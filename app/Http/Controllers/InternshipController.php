@@ -53,7 +53,7 @@ class InternshipController extends Controller
         $internship->description = $request->input('description');
         $internship->requirements = $request->input('requirements');
         $internship->offer = $request->input('offer');
-        $internship->companyId = $request->input('companyId');   //\Auth::company()->name;
+        $internship->companyId = '1';  //\Auth::company()->name;
         $internship->active = true;
         $internship->save();
 
@@ -61,6 +61,6 @@ class InternshipController extends Controller
         $request->session()->flash('message', 'Internship posted');
 
         // als alles gelukt is gaan we redirecten naar de view /stages
-        return redirect('internship/index');
+        return redirect('/stages');
     }
 }

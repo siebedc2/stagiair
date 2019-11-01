@@ -27,7 +27,7 @@ Route::get('/stages', 'InternshipController@index');
 Route::get('/stages/{id}', 'InternshipController@details');
 
 // Internship aanmaken door bedrijven
-Route::get('/aanmakenStage', 'InternshipController@create');
+Route::get('/stageAanmaken', 'InternshipController@create');
 
 // Versturen van data ingegeven bij het aanmaken van een intership door middel van post
 Route::post('/stages', 'InternshipController@store');

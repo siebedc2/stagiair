@@ -13,10 +13,10 @@
     <header class="stagiair_header">
         <a href="/" id="logo">Stagiair</a>
         <nav>
-                <a href="/">Home</a>
-                <a href="#">Internships</a>
-                <a href="#">My Profile</a>
-                <a href="/logout">Log out</a>
+                <a href="/">Thuis</a>
+                <a href="/stages">Stages</a>
+                <a href="#">Mijn Profiel</a>
+                <a href="/logout">Afmelden</a>
             </nav>
     </header>
    
