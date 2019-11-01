@@ -26,6 +26,12 @@ Route::get('/stages', 'InternshipController@index');
 // Show detail page of an internship
 Route::get('/stages/{id}', 'InternshipController@details');
 
+// Internship aanmaken door bedrijven
+Route::get('/aanmakenStage', 'InternshipController@create');
+
+// Versturen van data ingegeven bij het aanmaken van een intership door middel van post
+Route::post('/stages', 'InternshipController@store');
+
 // List with all companies
 Route::get('/bedrijven', 'CompanyController@index');
 
@@ -67,9 +73,6 @@ Route::post('/bedrijfsProfiel/instellingen', 'CompanyController@change');
 
 // Company internships
 Route::get('/bedrijfsProfiel/mijnStages', 'CompanyController@internships');
-
-// Make internship
-Route::get('/bedrijfsProfiel/aanmakenStage', 'CompanyController@createInternship');
 
 // Student and company logout
 Route::get('/logout', 'HomeController@logout');
