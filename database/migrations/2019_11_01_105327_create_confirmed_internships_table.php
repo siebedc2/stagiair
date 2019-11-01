@@ -16,8 +16,8 @@ class CreateConfirmedInternshipsTable extends Migration
         Schema::create('confirmedInternships', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            $table->string('companyId');
-            $table->string('studentId');
+            $table->integer('companyId');
+            $table->integer('studentId');
         });
     }
 

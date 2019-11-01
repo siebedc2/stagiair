@@ -16,7 +16,7 @@ class CreateReviewTable extends Migration
         Schema::create('reviews', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            $table->string('internshipId');
+            $table->integer('internshipId');
             $table->integer('stars');
             $table->string('description');
         });
