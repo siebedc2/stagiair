@@ -66,7 +66,7 @@ Route::get('/bedrijfsProfiel/instellingen', 'CompanyController@settings');
 Route::post('/bedrijfsProfiel/instellingen', 'CompanyController@change');
 
 // Company internships
-Route::get('/bedrijfsProfiel/mijnStages', 'CompanyController@internships');
+Route::get('/bedrijfsProfiel/mijnStages/{company}', 'CompanyController@internships');
 
 // Make internship
 Route::get('/bedrijfsProfiel/aanmakenStage', 'CompanyController@createInternship');
