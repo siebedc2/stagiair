@@ -12,9 +12,19 @@ class StudentController extends Controller
         return view('/student/register');
     }
 
-    public function handleRegister()
+    public function handleRegister(Request $request)
     {
-        
+        $student = new \App\Student();
+        $student->firstName = $request->input('firstName');
+        $student->lastName = $request->input('lastName');
+        $student->school = $request->input('school');
+        $student->education = $request->input('education');
+        $student->dateOfBirth = $request->input('dateOfBirth');
+        $student->email = $request->input('email');
+        $student->password = \Hash::make($request->input('password'));
+        $student->save();
+
+        dd($student);
     }
 
     // Student login
@@ -23,9 +33,17 @@ class StudentController extends Controller
         return view('/student/login');
     }
 
-    public function handleLogin()
+    public function handleLogin(Request $request)
     {
+        $credentials = $request->only(['email', 'password']);
+        if (\Auth::attempt($credentials)){
+            // redirect
+            return redirect('/');
+        }
         
+        else {
+            return view('student/login');
+        }
     }
 
     // Student profile

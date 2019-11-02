@@ -34,8 +34,8 @@ class CompanyController extends Controller
         $company->password = \Hash::make($request->input('password'));
         $company->save();
         
-        // dd($company);
-        return redirect('/homeCompany');
+         dd($company);
+        //return redirect('/homeCompany');
     }
 
     // Company login
@@ -48,7 +48,7 @@ class CompanyController extends Controller
     {
         $credentials = $request->only(['email', 'password']);
         if (\Auth::guard('company')->attempt($credentials)){
-            return redirect('/homeCompany');
+            return redirect('/');
         }
 
         /*$result = \Auth::guard('company')->attempt($credentials);
