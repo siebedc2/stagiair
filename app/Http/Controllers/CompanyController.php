@@ -24,9 +24,18 @@ class CompanyController extends Controller
         return view('/company/register');
     }
 
-    public function handleRegister()
+    public function handleRegister(Request $request)
     {
+        $company = new \App\Company();
+        $company->name = $request->input('name');
+        $company->email = $request->input('email');
+        $company->sector = $request->input('sector');
+        $company->city = $request->input('city');
+        $company->password = \Hash::make($request->input('password'));
+        $company->save();
         
+         dd($company);
+        //return redirect('/homeCompany');
     }
 
     // Company login
@@ -35,9 +44,19 @@ class CompanyController extends Controller
         return view('/company/login');
     }
 
-    public function handleLogin()
+    public function handleLogin(Request $request)
     {
-        
+        $credentials = $request->only(['email', 'password']);
+        if (\Auth::guard('company')->attempt($credentials)){
+            return redirect('/');
+        }
+
+        /*$result = \Auth::guard('company')->attempt($credentials);
+        dd($result);*/
+
+        else {
+            return view('company/login');
+        }
     }
 
     // Company profile

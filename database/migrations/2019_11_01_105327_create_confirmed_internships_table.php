@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateJobOfferTable extends Migration
+class CreateConfirmedInternshipsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,11 @@ class CreateJobOfferTable extends Migration
      */
     public function up()
     {
-        Schema::create('jobOffer', function (Blueprint $table) {
+        Schema::create('confirmedInternships', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            $table->string('companyName');
-            $table->string('title');
-            $table->text('description');
-            $table->text('requirements');
-            $table->text('offer');
-            $table->boolean('active');
+            $table->string('companyId');
+            $table->string('studentId');
         });
     }
 
@@ -32,6 +28,6 @@ class CreateJobOfferTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jobOffer');
+        Schema::dropIfExists('confirmedInternships');
     }
 }
