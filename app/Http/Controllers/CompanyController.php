@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class CompanyController extends Controller
 {
@@ -35,7 +36,7 @@ class CompanyController extends Controller
         $company->save();
         
          dd($company);
-        //return redirect('/homeCompany');
+        return redirect('/homeCompany');
     }
 
     // Company login
