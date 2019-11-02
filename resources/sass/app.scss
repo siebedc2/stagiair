@@ -151,7 +151,7 @@ nav {
     width: 800px;
     text-decoration: none;
     color: black;
-    border: 4px solid $grey;
+    border: 4px solid $darkgrey;
     padding: 5px;
 }
 
@@ -172,6 +172,8 @@ h4 {
     
 }
 
+// STAGE TEASERS
+
 // title van de stage in de index
 #titleTeaser {
     font-size: 20px;
@@ -184,7 +186,7 @@ h4 {
     border-left: 2px solid black;
 }
 
-// samenvatting van de stage in de index
+// samenvating van de stage in de index
 #descriptionTeaser {
     float: left;
     padding: 17px;
