@@ -55,7 +55,13 @@ class StudentController extends Controller
     // Edit student profile
     public function settings()
     {
-        return view('/student/settings');
+        if (Auth::guard('student')->check() || Auth::guard('company')->check()) {
+            return view('/student/settings');
+        }
+
+        else {
+            return redirect('/student/login');
+        }
     }
 
     // Save edited student profile

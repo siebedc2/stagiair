@@ -63,7 +63,13 @@ class CompanyController extends Controller
     // Company profile
     public function profile()
     {
-        return view('company/profile');
+        if (Auth::guard('company')->check() || Auth::guard('student')->check()) {
+            return view('company/profile');
+        }
+
+        else {
+            return redirect('/bedrijf/login');
+        }
     }
 
     // Edit company profile
@@ -80,12 +86,6 @@ class CompanyController extends Controller
 
     // Company internships
     public function internships()
-    {
-        
-    }
-
-    // Create internship
-    public function createInternship()
     {
         
     }

@@ -10,18 +10,7 @@ class HomeController extends Controller
     // Home
     public function index()
     {
-        if (Auth::guard('student')->check() || Auth::guard('company')->check()) {
-            return view('/welcome');
-        }
-
-        elseif (!Auth::guard('company')->check()) {
-            return redirect('/bedrijf/login');
-        }
-
-        elseif (Auth::guard('student')->check()) {
-            return redirect('/student/login');
-        }
-        
+        return view('/welcome');        
     }
 
     public function logout(){

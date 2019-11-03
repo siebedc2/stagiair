@@ -61,7 +61,8 @@ Route::get('/bedrijf/register', 'CompanyController@register');
 Route::post('/bedrijf/register', 'CompanyController@handleRegister');
 
 // Company login
-Route::get('/bedrijf/login', 'CompanyController@login');
+// Indien je return route(''); wilt doen moet je de route een naam geven anders herkent hij deze niet
+Route::get('/bedrijf/login', 'CompanyController@login')->name('bedrijfslogin');
 Route::post('/bedrijf/login', 'CompanyController@handleLogin');
 
 // Company profile
