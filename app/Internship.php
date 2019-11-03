@@ -8,6 +8,6 @@ class Internship extends Model
 {
     public function company() 
     {
-        return $this->belongsTo('\App\Artist');
+        return $this->belongsTo('\App\Company');
     }
 }
