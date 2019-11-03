@@ -25,7 +25,9 @@ class StudentController extends Controller
         $student->password = \Hash::make($request->input('password'));
         $student->save();
 
-        dd($student);
+        //$student::handleLogin($request);
+
+        return redirect('/');
     }
 
     // Student login
