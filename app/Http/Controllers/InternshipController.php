@@ -32,7 +32,14 @@ class InternshipController extends Controller
 
     public function create()
     {
-        return view('internship/create');
+        // Enkel als je ingelogd bent als een company mag je een internship kunnen aanmaken
+        if (Auth::guard('company')->check() || Auth::guard('student')->check()) {
+            return view('internship/create');
+        }
+
+        else {
+            return redirect('/bedrijf/login');
+        }
     }
 
     public function store(Request $request)
