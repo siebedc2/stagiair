@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class StudentController extends Controller
 {
@@ -49,25 +50,49 @@ class StudentController extends Controller
     // Student profile
     public function profile()
     {
-        return view('/student/profile');
+        $user ['userInfo']= Auth::user();
+        return view('/student/profile', $user);
     }
 
     // Edit student profile
     public function settings()
     {
-        if (Auth::guard('student')->check() || Auth::guard('company')->check()) {
-            return view('/student/settings');
-        }
-
-        else {
-            return redirect('/student/login');
-        }
+        $user ['userInfo']= Auth::user();
+        return view('/student/settings', $user);
     }
 
     // Save edited student profile
-    public function change()
+    public function change(Request $request)
     {
+        $user_id= Auth::id();
         
+        $student = \App\Student::find($user_id);
+                    
+        // $student->education = $request->input('education', $student['education']);
+        if ($request->filled('school'))
+        {
+            $student->school = $request->input('school');
+        }
+        
+        if ($request->filled('education'))
+        {
+            $student->education = $request->input('education');
+        }
+        
+        if ($request->filled('email'))
+        {
+            $student->email = $request->input('email');
+        }
+        
+        if ($request->filled('password'))
+        {
+            $student->password = \Hash::make($request->input('password'));
+        }
+            
+        $student->save();
+        $request->session()->flash('message', 'Info changed!');
+            
+        return redirect('/mijnProfiel');
     }
 
     // Student internships

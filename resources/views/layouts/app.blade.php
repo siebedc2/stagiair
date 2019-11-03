@@ -17,7 +17,7 @@
         <nav>
             <a href="/">Thuis</a>
             <a href="/stages">Stages</a>
-            <a href="#">Mijn Profiel</a>
+            <a href="/mijnProfiel">Mijn Profiel</a>
             <a href="/logout">Afmelden</a>
         </nav>
     </header>

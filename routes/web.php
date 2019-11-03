@@ -43,14 +43,16 @@ Route::get('/student/register', 'StudentController@register');
 Route::post('/student/register', 'StudentController@handleRegister');
 
 // Student login
-Route::get('/student/login', 'StudentController@login');
+Route::get('/student/login', 'StudentController@login')->name('studentlogin');
 Route::post('/student/login', 'StudentController@handleLogin');
 
 // Student profile
-Route::get('/mijnProfiel', 'StudentController@profile');
+// Check of de gebruiker wel ingelogd is
+Route::get('/mijnProfiel', 'StudentController@profile')->middleware('auth');
 
 // Edit student profile
-Route::get('/mijnProfiel/instellingen', 'StudentController@settings');
+// Check of de gebruiker wel ingelogd is
+Route::get('/mijnProfiel/instellingen', 'StudentController@settings')->middleware('auth');
 Route::post('/mijnProfiel/instellingen', 'StudentController@change');
 
 // Student internships
