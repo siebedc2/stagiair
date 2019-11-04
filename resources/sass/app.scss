@@ -116,6 +116,18 @@ h2 {
 }
 }
 
+.form-group {
+    text-align: left;
+    small {
+        text-align: center;
+        margin-top: -20px;
+    }
+}
+.register label {
+    width: 60%;
+    margin-left: 15%;
+}
+
 .btn--login{
     color: white;
     background: $blue;

@@ -123,6 +123,20 @@ h2 {
   padding-left: 0;
 }
 
+.form-group {
+  text-align: left;
+}
+
+.form-group small {
+  text-align: center;
+  margin-top: -20px;
+}
+
+.register label {
+  width: 60%;
+  margin-left: 15%;
+}
+
 .btn--login {
   color: white;
   background: #6392ED;

@@ -6,7 +6,7 @@ Registreren
 
 @section('content')
 
-<form action="" method="post">
+<form action="" method="post" class="login register">
     {{csrf_field()}}
 
     <div class="form-total">
@@ -48,7 +48,8 @@ Registreren
                 <input name="password" type="password" class="form-control" id="password" placeholder="Geef jouw wachtwoord in...">
             </div>
 
-            <button type="submit" class="btn btn-primary">Registreren</button>
+            <button type="submit" class="btn btn--login">Registreren</button>
+            <a href="/student/login">Ik heb al een account?</a>
         </form>
     </div>
 

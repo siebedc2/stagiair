@@ -6,7 +6,7 @@ Login
 
 @section('content')
 
-<a class="btn switch" href="/company/login">login bedrijf</a>
+<a class="btn switch" href="/bedrijf/login">login bedrijf</a>
 
 <form method="post" action="" class="login">
 
