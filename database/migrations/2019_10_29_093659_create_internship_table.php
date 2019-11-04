@@ -21,7 +21,7 @@ class CreateInternshipTable extends Migration
             $table->text('requirements');
             $table->text('offer');
             $table->boolean('active');
-            $table->text('companyId');
+            $table->integer('company_id');
         });
     }
 

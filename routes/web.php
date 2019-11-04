@@ -43,14 +43,16 @@ Route::get('/student/register', 'StudentController@register');
 Route::post('/student/register', 'StudentController@handleRegister');
 
 // Student login
-Route::get('/student/login', 'StudentController@login');
+Route::get('/student/login', 'StudentController@login')->name('studentlogin');
 Route::post('/student/login', 'StudentController@handleLogin');
 
 // Student profile
-Route::get('/mijnProfiel', 'StudentController@profile');
+// Check of de gebruiker wel ingelogd is
+Route::get('/mijnProfiel', 'StudentController@profile')->middleware('auth');
 
 // Edit student profile
-Route::get('/mijnProfiel/instellingen', 'StudentController@settings');
+// Check of de gebruiker wel ingelogd is
+Route::get('/mijnProfiel/instellingen', 'StudentController@settings')->middleware('auth');
 Route::post('/mijnProfiel/instellingen', 'StudentController@change');
 
 // Student internships
@@ -61,7 +63,8 @@ Route::get('/bedrijf/register', 'CompanyController@register');
 Route::post('/bedrijf/register', 'CompanyController@handleRegister');
 
 // Company login
-Route::get('/bedrijf/login', 'CompanyController@login');
+// Indien je return route(''); wilt doen moet je de route een naam geven anders herkent hij deze niet
+Route::get('/bedrijf/login', 'CompanyController@login')->name('bedrijfslogin');
 Route::post('/bedrijf/login', 'CompanyController@handleLogin');
 
 // Company profile
@@ -72,7 +75,7 @@ Route::get('/bedrijfsProfiel/instellingen', 'CompanyController@settings');
 Route::post('/bedrijfsProfiel/instellingen', 'CompanyController@change');
 
 // Company internships
-Route::get('/bedrijfsProfiel/mijnStages', 'CompanyController@internships');
+Route::get('/bedrijfsProfiel/mijnStages/{company}', 'CompanyController@internships');
 
 // Student and company logout
 Route::get('/logout', 'HomeController@logout');

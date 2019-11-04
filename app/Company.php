@@ -8,6 +8,8 @@ use Illuminate\Notifications\Notifiable;
 
 class Company extends Authenticatable
 {
+    
+    // $company->internships()
     protected $guard = 'company';
 
     /**

@@ -48,7 +48,7 @@ Registreren
                 <input name="password" type="password" class="form-control" id="password" placeholder="Geef jouw wachtwoord in...">
             </div>
 
-            <button type="submit" class="btn btn-primary">Sign me up</button>
+            <button type="submit" class="btn btn-primary">Registreren</button>
         </form>
     </div>
 

@@ -15,10 +15,16 @@
     <header class="stagiair_header">
         <a href="/" id="logo">Stagiair</a>
         <nav>
-            <a href="/">Thuis</a>
-            <a href="/stages">Stages</a>
-            <a href="#">Mijn Profiel</a>
-            <a href="/logout">Afmelden</a>
+            @if (Auth::check())
+                <a href="/">Thuis</a>
+                <a href="/stages">Stages</a>
+                <a href="/mijnProfiel">Mijn Profiel</a>
+                <a href="/logout">Afmelden</a>
+            
+            @else 
+                <a href="/student/login">Inloggen als student</a>
+                <a href="/bedrijf/login">Inloggen als bedrijf</a>
+            @endif
         </nav>
     </header>
 
