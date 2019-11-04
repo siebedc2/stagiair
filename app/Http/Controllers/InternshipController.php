@@ -23,9 +23,11 @@ class InternshipController extends Controller
     // public function show(\App\Internship $internship){
     //     return view('internships/show', $internship);
     // }
+    
     public function details($id)
     {
         $data['internship'] = \App\Internship::where('id', $id)->first();
+        // $data['internship'] = \App\Internship::where('id', $internship)->with('reviews')->first();
 
         return view('internship/details', $data);
     }
@@ -41,6 +43,7 @@ class InternshipController extends Controller
             return redirect('/bedrijf/login');
         }
     }
+    
 
     public function store(Request $request)
     {

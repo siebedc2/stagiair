@@ -86,9 +86,10 @@ class CompanyController extends Controller
     }
 
     // Company internships
-    public function internships()
+    public function internships($company)
     {
-        
+        $data['company'] = \App\Company::where('id', $company)->with('internships')->first();
+        return view('company/internships', $data);
     }
 
 }

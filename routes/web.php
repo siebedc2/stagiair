@@ -75,7 +75,7 @@ Route::get('/bedrijfsProfiel/instellingen', 'CompanyController@settings');
 Route::post('/bedrijfsProfiel/instellingen', 'CompanyController@change');
 
 // Company internships
-Route::get('/bedrijfsProfiel/mijnStages', 'CompanyController@internships');
+Route::get('/bedrijfsProfiel/mijnStages/{company}', 'CompanyController@internships');
 
 // Student and company logout
 Route::get('/logout', 'HomeController@logout');
