@@ -1,35 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap);@import url(https://fonts.googleapis.com/css?family=Poppins&display=swap);body {
-  background-color: #fcfcfc;
-  font-family: Arial, Helvetica, sans-serif;
+  background: #6392ED;
   max-width: 100%;
   overflow-x: hidden;
+  color: white;
+  font-family: "Poppins", sans-serif;
 }
 
 a {
   text-decoration: none;
 }
 
-a h1 {
-  font-family: "Poppins", sans-serif;
-  font-size: 48px;
-  font-weight: lighter;
-  margin-top: 100px;
-  color: black;
-}
-
-a h1:after {
-  display: block;
-  content: "->  Search intenships!";
-  font-size: 20px;
-  position: absolute;
-  left: 10;
-}
-
 #logo {
-  font-family: "Poppins", sans-serif;
   text-decoration: none;
-  color: black;
-  font-size: 30px;
+  color: white;
+  font-size: 20px;
 }
 
 .stagiair_header {
@@ -38,13 +22,9 @@ a h1:after {
   width: 100%;
   -webkit-box-pack: justify;
           justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 25px;
   margin-bottom: 50px;
-  margin-left: 20px;
-}
-
-h1 {
-  margin-top: 50px;
+  margin-left: 75px;
 }
 
 nav {
@@ -55,26 +35,15 @@ nav {
 }
 
 nav a {
-  color: black;
+  color: white;
   text-decoration: none;
   margin-left: 50px;
   position: relative;
 }
 
-nav a:active:after {
-  display: block;
-  content: "";
-  width: 100%;
-  height: 2px;
-  background: black;
-  position: absolute;
-  bottom: 5;
-  left: 0;
-}
-
 nav a:hover {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 nav a:hover:after {
@@ -82,29 +51,92 @@ nav a:hover:after {
   content: "";
   width: 100%;
   height: 2px;
-  background: black;
+  background: white;
   position: absolute;
   bottom: -10px;
   left: 0;
 }
 
-.stagiair__main {
+.btn {
+  width: 200px;
+  background: white;
+  color: #6392ED;
+}
+
+.home {
+  margin-top: 100px;
   display: -webkit-box;
   display: flex;
-  margin-top: 70px;
-  margin-left: 50px;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  width: 70%;
 }
 
-.stagiair__main h1 {
-  margin-right: 120px;
-  align-self: center;
+.home p {
+  width: 75%;
 }
 
-.stagiair__main img {
-  max-width: 700px;
-  margin-right: -150px;
+h1 {
+  font-size: 70px;
+  font-weight: bold;
+}
+
+h2 {
+  margin-top: 10px;
+}
+
+.btn--stage {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.login {
+  background: white;
+  color: black;
+  text-align: center;
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 50px;
+}
+
+.login h2 {
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.login input,
+.login .check {
+  background: #ebebeb;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+}
+
+.login .check {
+  background: none;
+}
+
+.login .form-check {
+  padding-left: 0;
+}
+
+.btn--login {
+  color: white;
+  background: #6392ED;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.switch {
+  position: absolute;
+  top: 50px;
+  right: 50px;
 }
 
 .myInfo {
