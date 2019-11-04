@@ -8,11 +8,8 @@ use Illuminate\Notifications\Notifiable;
 
 class Company extends Authenticatable
 {
-<<<<<<< HEAD
-    public function internships() 
-    {
-        // $company->internships()
-=======
+    
+    // $company->internships()
     protected $guard = 'company';
 
     /**
@@ -45,7 +42,6 @@ class Company extends Authenticatable
     public function internships()
     {
         // Relations, een company heeft meerdere internships maar een internship behoort maar toe aan 1 company
->>>>>>> dd209c16133509af204482d8ee7736035f9e9183
         return $this->hasMany('\App\Internship');
     }
 }
