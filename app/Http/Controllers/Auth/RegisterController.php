@@ -38,6 +38,8 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+        $this->middleware('guest:student')->except('logout');
+        $this->middleware('guest:company')->except('logout');
     }
 
     /**

@@ -1,7 +1,7 @@
 @extends('layouts/log')
 
 @section('title')
-Login
+Registreren
 @endsection
 
 @section('content')
