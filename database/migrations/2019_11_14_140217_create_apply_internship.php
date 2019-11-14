@@ -14,8 +14,9 @@ class CreateApplyInternship extends Migration
         Schema::create('apply_internship', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            $table->integer('internships_id');
-            $table->integer('students_id');
+            // dit is voor een ManyToMany
+            $table->integer('students_id')->unsigned();
+            $table->integer('internships_id')->unsigned();
         });
     }
 

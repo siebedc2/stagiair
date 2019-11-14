@@ -12,9 +12,9 @@ class Internship extends Model
         return $this->belongsTo('\App\Company');
     }
 
-    public function apply()
+    public function students()
     {
-        // Relations, een stage kan meerdere sollicitaties hebben
-        return $this->hasMany('\App\Apply');
+        // Relations, een stage kan meerdere sollicitaties hebben van verschillende studenten
+        return $this->belongsToMany('\App\Student');
     }
 }
