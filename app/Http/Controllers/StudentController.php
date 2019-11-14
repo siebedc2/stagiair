@@ -39,12 +39,10 @@ class StudentController extends Controller
     public function handleLogin(Request $request)
     {
         $credentials = $request->only(['email', 'password']);
-        if (\Auth::attempt($credentials)){
+        if (\Auth::attempt($credentials)) {
             // redirect
             return redirect('/');
-        }
-        
-        else {
+        } else {
             return view('student/login');
         }
     }
@@ -52,54 +50,54 @@ class StudentController extends Controller
     // Student profile
     public function profile()
     {
-        $user ['userInfo']= Auth::user();
+        $user['userInfo'] = Auth::user();
+
         return view('/student/profile', $user);
     }
 
     // Edit student profile
     public function settings()
     {
-        $user ['userInfo']= Auth::user();
+        $user['userInfo'] = Auth::user();
+
         return view('/student/settings', $user);
     }
 
     // Save edited student profile
     public function change(Request $request)
     {
-        $user_id= Auth::id();
-        
+        $user_id = Auth::id();
+
         $student = \App\Student::find($user_id);
-                    
+
         // $student->education = $request->input('education', $student['education']);
-        if ($request->filled('school'))
-        {
+        if ($request->filled('school')) {
             $student->school = $request->input('school');
         }
-        
-        if ($request->filled('education'))
-        {
+
+        if ($request->filled('education')) {
             $student->education = $request->input('education');
         }
-        
-        if ($request->filled('email'))
-        {
+
+        if ($request->filled('email')) {
             $student->email = $request->input('email');
         }
-        
-        if ($request->filled('password'))
-        {
+
+        if ($request->filled('password')) {
             $student->password = \Hash::make($request->input('password'));
         }
-            
+
         $student->save();
         $request->session()->flash('message', 'Info changed!');
-            
+
         return redirect('/mijnProfiel');
     }
 
-    // Student internships
-    public function internships()
+    // Student internships, de stages waar de student op heeft gesolliciteerd
+    public function applies()
     {
-        
+        $user['userInfo'] = Auth::user();
+
+        return view('/student/myInternships', $user);
     }
 }

@@ -8,7 +8,7 @@
         <h1>{{$internship->title}}</h1>
     </div>
 
-    <h2>{{$internship->companyId}}</h2>
+    <h2>{{$internship->company_id}}</h2>
 
     <p>Aangemaakt op - {{$internship->created_at->format('d/m/Y')}}</p>
 
