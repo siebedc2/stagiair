@@ -16,14 +16,15 @@
         <a href="/" id="logo">Stagiair</a>
         <nav>
             @if (Auth::check())
-                <a href="/">Thuis</a>
-                <a href="/stages">Stages</a>
+                <a href="/stages">Stages zoeken</a>
+                <a href="/bedrijfsReviews">Bedrijfsreviews</a>
                 <a href="/mijnProfiel">Mijn Profiel</a>
                 <a href="/logout">Afmelden</a>
             
             @else 
-                <a href="/student/login">Inloggen als student</a>
-                <a href="/bedrijf/login">Inloggen als bedrijf</a>
+                <a href="/stages">Stages zoeken</a>
+                <a href="/bedrijfsReviews">Bedrijfsreviews</a>
+                <a href="/student/login">Aanmelden</a>
             @endif
         </nav>
     </header>
