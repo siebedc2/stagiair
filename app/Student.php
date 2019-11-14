@@ -2,7 +2,6 @@
 
 namespace App;
 
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -38,4 +37,10 @@ class Student extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function apply()
+    {
+        // Relations, een student kan meerdere sollicitaties doen op verschillende stages
+        return $this->hasMany('\App\Apply');
+    }
 }
