@@ -26,10 +26,12 @@
 
     <!-- als de student ingelogd is kan hij solliciteren op de stage, zoniet (else) dan wordt hij geriderect naar de inlog pagina -->
     @auth
-        <a href="#" class="btn btn-success">Solliciteer</a>
+        <form method="post" action="/mijnProfiel/mijnSollicitaties">
+            <button type="submit" class="btn btn-primary">Solliciteer</button>
+        </form>
 
     @else
-        <a href="/student/login" class="btn btn-success">Login om te solliciteren</a>
+        <a   type="submit" href="/student/login" class="btn btn-success">Login om te solliciteren</a>
 
     @endauth
 

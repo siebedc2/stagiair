@@ -100,4 +100,22 @@ class StudentController extends Controller
 
         return view('/student/myInternships', $user);
     }
+
+    public function store(Request $request)
+    {
+        $request->flash();
+
+        // data die ingegeven linken aan de db
+        $apply_internship = new \App\Apply();
+        $apply_internship->students_id = \Auth::user()->id;
+        $apply_internship->internships_id = '2';
+        $apply_internship->active = true;
+        $apply_internship->save();
+
+        // flash message laten zien met een alert, deze blijft er maar even staan door -> flash()
+        $request->session()->flash('message', 'Sollicitatie opgeslagen');
+
+        // als alles gelukt is gaan we redirecten
+        return redirect('/mijnProfiel/mijnSollicitaties');
+    }
 }
