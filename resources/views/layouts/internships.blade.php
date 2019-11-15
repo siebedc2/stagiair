@@ -13,11 +13,17 @@
     <header class="stagiair_header">
         <a href="/" id="logo">Stagiair</a>
         <nav>
-                <a href="/">Thuis</a>
-                <a href="/stages">Stages</a>
-                <a href="/mijnProfiel">Mijn Profiel</a>
-                <a href="/logout">Afmelden</a>
-            </nav>
+        @if (Auth::check())
+            <a href="/stages">Stages zoeken</a>
+            <a href="/bedrijfsReviews">Bedrijfsreviews</a>
+            <a href="/mijnProfiel">{{Auth::user()->email}}</a>
+            <a href="/logout">Afmelden</a>
+            
+        @else 
+            <a href="/stages">Stages zoeken</a>
+            <a href="/bedrijfsReviews">Bedrijfsreviews</a>
+            <a href="/student/login">Aanmelden</a>
+        @endif
     </header>
    
     
