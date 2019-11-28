@@ -58,7 +58,7 @@ Route::post('/mijnProfiel/instellingen', 'StudentController@change');
 // Student internships, de stages waar de student op heeft gesolliciteerd
 Route::get('/mijnProfiel/mijnSollicitaties', 'StudentController@applies');
 // Info posten van welke student op welke stage solliciteert
-Route::post('/mijnProfiel/mijnSollicitaties', 'StudentController@store');
+Route::post('/mijnProfiel/mijnSollicitaties', 'StudentController@applyForInternships');
 
 // Company register
 Route::get('/bedrijf/register', 'CompanyController@register');
