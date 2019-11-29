@@ -23,7 +23,7 @@ class InternshipController extends Controller
     // public function show(\App\Internship $internship){
     //     return view('internships/show', $internship);
     // }
-    
+
     public function details($id)
     {
         $data['internship'] = \App\Internship::where('id', $id)->first();
@@ -37,13 +37,10 @@ class InternshipController extends Controller
         // Enkel als je ingelogd bent als een company mag je een internship kunnen aanmaken
         if (Auth::guard('company')->check() || Auth::guard('student')->check()) {
             return view('internship/create');
-        }
-
-        else {
+        } else {
             return redirect('/bedrijf/login');
         }
     }
-    
 
     public function store(Request $request)
     {
