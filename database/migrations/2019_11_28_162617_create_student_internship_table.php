@@ -15,8 +15,15 @@ class CreateStudentInternshipTable extends Migration
             $table->bigIncrements('id');
             $table->timestamps();
             // dit is voor een ManyToMany
-            $table->integer('students_id')->unsigned();
-            $table->integer('internships_id')->unsigned();
+            $table->unsignedbigInteger('student_id')->index();
+            $table->foreign('student_id')->references('id')
+                ->on('students')
+                ->onDelete('cascade');
+
+            $table->unsignedbigInteger('internship_id')->index();
+            $table->foreign('internship_id')->references('id')
+                ->on('internships')
+                ->onDelete('cascade');
         });
     }
 

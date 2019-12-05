@@ -27,6 +27,9 @@
     <!-- als de student ingelogd is kan hij solliciteren op de stage, zoniet (else) dan wordt hij geriderect naar de inlog pagina -->
     @auth
         <form method="post" action="/mijnProfiel/mijnSollicitaties">
+            {{ csrf_field() }}
+            <input value="{{ request()->route('id') }}" name=id />
+
             <button type="submit" class="btn btn-primary">Solliciteer</button>
         </form>
 

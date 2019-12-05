@@ -15,6 +15,6 @@ class Internship extends Model
     public function students()
     {
         // ManyToMany relatie
-        return $this->belongsToMany('\App\Student', 'student_internship', 'internships_id', 'students_id');
+        return $this->belongsToMany('\App\Student', 'student_internship', 'internship_id', 'student_id');
     }
 }

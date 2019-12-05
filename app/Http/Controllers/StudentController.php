@@ -105,20 +105,14 @@ class StudentController extends Controller
     {
         // data die ingegeven linken aan de db
         $student_internship = new \App\Apply();
-        $student_internship->students_id = \Auth::user()->id;
-        $student_internship->internships_id = '2';
+        $student_internship->student_id = \Auth::user()->id;
+        $student_internship->internship_id = $request->input('id');
         $student_internship->save();
-
-        // Get the model
-        $studentModel = Student::find($student_internship->students_id);
-
-        // Create the relation
-        $studentModel->internships()->attach($student_internship->internships_id);
 
         // flash message laten zien met een alert, deze blijft er maar even staan door -> flash()
         $request->session()->flash('message', 'Sollicitatie opgeslagen');
 
-        // als alles gelukt is gaan we redirecten
-        return redirect('/mijnProfiel/mijnSollicitaties');
+        // als alles gelukt is gaan we redirecten naar een view
+        return view('student/myInternships');
     }
 }
