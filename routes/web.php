@@ -48,11 +48,11 @@ Route::post('/student/login', 'StudentController@handleLogin');
 
 // Student profile
 // Check of de gebruiker wel ingelogd is
-Route::get('/mijnProfiel', 'StudentController@profile')->middleware('auth');
+Route::get('/mijnProfiel', 'StudentController@profile');
 
 // Edit student profile
 // Check of de gebruiker wel ingelogd is
-Route::get('/mijnProfiel/instellingen', 'StudentController@settings')->middleware('auth');
+Route::get('/mijnProfiel/instellingen', 'StudentController@settings');
 Route::post('/mijnProfiel/instellingen', 'StudentController@change');
 
 // Student internships, de stages waar de student op heeft gesolliciteerd

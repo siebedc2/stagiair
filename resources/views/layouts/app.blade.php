@@ -20,13 +20,6 @@
                 <a href="/bedrijfsReviews">Bedrijfsreviews</a>
                 <a href="/mijnProfiel">{{Auth::user()->email}}</a>
                 <a href="/logout">Afmelden</a>
-
-            @elseif (Auth::guard('company')->check())
-                <a href="/stages">Stages zoeken</a>
-                <a href="/bedrijfsReviews">Bedrijfsreviews</a>
-                <a href="/mijnProfiel">{{Auth::guard('company')->user()->email}}</a>
-                <a href="/logout">Afmelden</a>
-
             
             @else 
                 <a href="/stages">Stages zoeken</a>
