@@ -13,8 +13,18 @@ class HomeController extends Controller
         return view('/welcome');        
     }
 
-    public function logout(){
-        Auth::logout();
+    
+    public function logout() {
+        if (Auth::guard('company')->check()) {
+            Auth::guard('company')->logout();
+        }
+        
+        elseif (Auth::check()) {
+            Auth::logout();
+        }
+
         return redirect('/');
+
     }
+
 }
