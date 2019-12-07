@@ -24,9 +24,16 @@
             @elseif (Auth::check())
                 <a href="/stages">Stages zoeken</a>
                 <a href="/bedrijfsReviews">Bedrijfsreviews</a>
-                <a href="/mijnProfiel">{{Auth::user()->email}}</a>
+                <a href="/bedrijfsProfiel">{{Auth::guard('company')->user()->email}}</a>
                 <a href="/logout">Afmelden</a>
             
+            @elseif (Auth::check()) {
+                <a href="/stages">Stages zoeken</a>
+                <a href="/bedrijfsReviews">Bedrijfsreviews</a>
+                <a href="/mijnProfiel">{{Auth::user()->email}}</a>
+                <a href="/logout">Afmelden</a>
+            }
+
             @else 
                 <a href="/stages">Stages zoeken</a>
                 <a href="/bedrijfsReviews">Bedrijfsreviews</a>
