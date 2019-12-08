@@ -70,4 +70,12 @@ class InternshipController extends Controller
         // als alles gelukt is gaan we redirecten naar de view /stages
         return redirect('/stages');
     }
+    
+    public function search(Request $request) {
+        $input = $request->input('searchDescription');
+        
+        $data['internships'] = \DB::table('internships')->where('description', 'LIKE', '%' . $input . '%')->get();
+        
+        return view('internship/index', $data);
+    }
 }
