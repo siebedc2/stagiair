@@ -65,7 +65,8 @@ class CompanyController extends Controller
     public function profile()
     {
         if (Auth::guard('company')->check() || Auth::guard('student')->check()) {
-            return view('company/profile');
+            $company['companyInfo'] = Auth::guard('company')->user();
+            return view('company/profile', $company);
         }
 
         else {
