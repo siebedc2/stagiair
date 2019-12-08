@@ -70,12 +70,15 @@ class InternshipController extends Controller
         // als alles gelukt is gaan we redirecten naar de view /stages
         return redirect('/stages');
     }
-    
+
     public function search(Request $request) {
+        // Input van user van de zoekopdracht opvangen en in een variabele steken
         $input = $request->input('searchDescription');
-        
+
+        // Met behulp van bovenstaande variabele de juiste internships uit de database halen waar de zoekopdracht van de gebruiker terug te vinden is in de beschrijving van de stage
         $data['internships'] = \DB::table('internships')->where('description', 'LIKE', '%' . $input . '%')->get();
         
+        // De corresponderende stages tonen in een view
         return view('internship/index', $data);
     }
 }
