@@ -1,4 +1,8 @@
-@extends('layouts/internships')
+@extends('layouts/app')
+
+@section('title')
+    Stages
+@endsection
 
 @section('content')
 

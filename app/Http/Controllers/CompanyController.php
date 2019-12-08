@@ -93,4 +93,8 @@ class CompanyController extends Controller
         return view('company/internships', $data);
     }
 
+    public function reviews() {
+        return view('company/reviews');
+    }
+
 }
