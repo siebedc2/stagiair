@@ -14,7 +14,7 @@ class Internship extends Model
 
     public function students()
     {
-        // Relations, een stage kan meerdere sollicitaties hebben van verschillende studenten
-        return $this->belongsToMany('\App\Student');
+        // ManyToMany relatie
+        return $this->belongsToMany('\App\Student', 'student_internship', 'internship_id', 'student_id');
     }
 }

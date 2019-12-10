@@ -40,7 +40,7 @@ class Student extends Authenticatable
 
     public function internships()
     {
-        // Relations, een student kan meerdere sollicitaties doen op verschillende stages
-        return $this->belongsToMany('\App\Internship');
+        // ManyToMany relatie
+        return $this->belongsToMany('\App\Internship', 'student_internship', 'student_id', 'internship_id');
     }
 }
