@@ -276,3 +276,26 @@ h3 {
   width: 70%;
 }
 
+.internship_details {
+  background-color: white;
+  color: #6392ED;
+  padding: 50px;
+  box-shadow: 0px 20px 40px #5b5e83;
+  border-radius: 10px;
+}
+
+.internship_details h3 {
+  color: #6392ED;
+  font-weight: bolder;
+  border-top: 3px solid #e7e5ee;
+  margin-top: 50px;
+  padding-top: 20px;
+}
+
+.internship_details a {
+  background-color: #6392ED;
+  color: white;
+  border: none;
+  margin-top: 30px;
+}
+
