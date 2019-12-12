@@ -26,6 +26,19 @@ class InternshipController extends Controller
         //}
     }
 
+    // filterquery
+    public function filter($filter)
+    {
+        $data['internships'] = \DB::table('internships')->where('sector', $filter)->get();
+        
+        //sectoren voor filters bepalen
+        $data['sectors'] = \DB::table('internships')->get(['sector'])->unique();
+       
+
+        return view('internship/index', $data);
+        
+    }
+
     // public function show(\App\Internship $internship){
     //     return view('internships/show', $internship);
     // }

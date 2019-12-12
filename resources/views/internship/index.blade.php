@@ -31,7 +31,7 @@
                 <p>Filter by sector:</p>
                 @foreach ($sectors as $s)
 
-                    <a href="">{{$s->sector}} | </a>
+                    <a href="/stages/filter/{{$s->sector}}">{{$s->sector}} | </a>
                 @endforeach
             </div>
             <div class="row">
