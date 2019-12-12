@@ -6,10 +6,10 @@
 @endsection
 
 @section('content')
-    <h1>Reviews</h1>
+    <h1>Bedrijfsreviews</h1>
 
     @if(Auth::check())
-        <a href="/schrijfReview">Schrijf review</a>
+        <a class="btn btn-primary" href="/schrijfReview">Schrijf review</a>
     @endif
 
 
@@ -21,6 +21,7 @@
                 <h4 id="stars">{{$review->stars}}</h4>
                 <h4 id="description">{{$review->description}}</h4>
                 <p>{{$review->student_id}}</p>
+                <p>{{$review->company_id}}</p>
             </div>
             @endforeach
         </div>

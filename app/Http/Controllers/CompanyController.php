@@ -113,7 +113,7 @@ class CompanyController extends Controller
 
         $review = new \App\Review();
         $review->company_id = "1";
-        $review->student_id = "1";
+        $review->student_id = Auth::user()->id;
         $review->stars = $request->input('stars');
         $review->description = $request->input('description');
         $review->save();
