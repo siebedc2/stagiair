@@ -26,6 +26,7 @@
                 <a href="/bedrijfsReviews">Bedrijfsreviews</a>
                 <a href="/mijnProfiel">{{Auth::user()->email}}</a>
                 <a href="/logout">Afmelden</a>
+            
 
             @else 
                 <a href="/stages">Stages zoeken</a>

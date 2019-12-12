@@ -35,11 +35,11 @@ class InternshipController extends Controller
     public function create()
     {
         // Enkel als je ingelogd bent als een company mag je een internship kunnen aanmaken
-        if (Auth::guard('company')->check() || Auth::guard('student')->check()) {
-            return view('internship/create');
-        } else {
-            return redirect('/bedrijf/login');
-        }
+        // if (Auth::guard('company')->check() || Auth::guard('student')->check()) {
+        return view('internship/create');
+        // } else {
+        // return redirect('/bedrijf/login');
+        // }
     }
 
     public function store(Request $request)
@@ -60,7 +60,7 @@ class InternshipController extends Controller
         $internship->description = $request->input('description');
         $internship->requirements = $request->input('requirements');
         $internship->offer = $request->input('offer');
-        $internship->companyId = '1';  //\Auth::company()->name;
+        $internship->company_id = '1';  //\Auth::company()->name;
         $internship->active = true;
         $internship->save();
 
