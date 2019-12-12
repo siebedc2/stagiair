@@ -6,7 +6,7 @@
 
 @section('content')
 
-    
+   
 
     <h1>Stages</h1>
 
@@ -23,8 +23,17 @@
     @if( $flash = session('message') )
         <div class="alert alert-success">{{ $flash }}</div>
     @endif
+
+
     
         <div class="container internships">
+            <div class="filter">
+                <p>Filter by sector:</p>
+                @foreach ($sectors as $s)
+
+                    <a href="/stages/filter/{{$s->sector}}">{{$s->sector}} | </a>
+                @endforeach
+            </div>
             <div class="row">
                 <!-- lussen over $internships in de DB waar $i 1 internship is -->
                 @foreach ($internships as $i)
