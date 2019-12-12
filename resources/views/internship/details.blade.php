@@ -35,7 +35,7 @@
         <a href="/mijnProfiel/mijnSollicitaties/{{$internship->id}}" class="btn btn-success">Solliciteer</a>
 
     @else
-        <a type="submit" href="/student/login" class="btn btn-false">Login om te solliciteren</a>
+        <a type="submit" href="/student/login" class="btn btn-false">Login als student om te solliciteren</a>
 
     @endauth
 
