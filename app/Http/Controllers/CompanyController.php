@@ -93,4 +93,34 @@ class CompanyController extends Controller
         return view('company/internships', $data);
     }
 
+    public function reviews() {
+        $data['reviews'] = \DB::table('reviews')->get();
+        return view('review/index', $data);
+    }
+
+    public function makeReview() {
+        return view('review/create');
+    }
+
+    public function handleMakeReview(Request $request) {
+
+        $validation = $request->validate([
+            'stars' => 'required',
+            'description' => 'required',
+        ]);
+
+        $request->flash();
+
+        $review = new \App\Review();
+        $review->company_id = "1";
+        $review->student_id = "1";
+        $review->stars = $request->input('stars');
+        $review->description = $request->input('description');
+        $review->save();
+
+        $request->session()->flash('message', 'Review geplaatst');
+
+        return redirect('/bedrijfsReviews');
+    }
+
 }

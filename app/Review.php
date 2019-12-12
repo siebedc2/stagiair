@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Review extends Model
 {
-    public function internship() 
+    public function company() 
     {
-        return $this->belongsTo('\App\Internship');
+        return $this->belongsTo('\App\Company');
     }
 }
