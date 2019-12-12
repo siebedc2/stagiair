@@ -23,6 +23,9 @@ Route::get('/', 'HomeController@index');
 // List with all internships
 Route::get('/stages', 'InternshipController@index');
 
+// List with all internships based on search
+Route::post('/search', 'InternshipController@search');
+
 // Show detail page of an internship
 Route::get('/stages/{id}', 'InternshipController@details');
 
