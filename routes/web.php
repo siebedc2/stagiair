@@ -75,6 +75,10 @@ Route::get('/bedrijfsProfiel', 'CompanyController@profile');
 // Company reviews
 Route::get('/bedrijfsReviews', 'CompanyController@reviews');
 
+// Review posten
+Route::get('/schrijfReview', 'CompanyController@makeReview');
+Route::post('/schrijfReview', 'CompanyController@handleMakeReview');
+
 // Edit company profile
 Route::get('/bedrijfsProfiel/instellingen', 'CompanyController@settings');
 Route::post('/bedrijfsProfiel/instellingen', 'CompanyController@change');
