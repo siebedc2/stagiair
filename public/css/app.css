@@ -57,6 +57,15 @@ nav a:hover:after {
   left: 0;
 }
 
+nav .iconprofile {
+  width: 160px;
+  text-align: right;
+  background-image: url(/images/user.png?af45648e4a492d0dc4ff63bb77e85173);
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: 0px 3px;
+}
+
 .btn {
   width: 200px;
   background: white;
@@ -219,11 +228,16 @@ h2 {
   padding: 5px;
 }
 
+<<<<<<< HEAD
 .internship:hover,
 .review:hover {
   background-color: #fcfcfc;
+=======
+.internship:hover {
+  background-color: white;
+>>>>>>> 6d456975d4be64de57eb0de6bad205b8589e1212
   text-decoration: none;
-  color: black;
+  color: #6392ED;
   border: 4px solid #6392ED;
 }
 
@@ -295,5 +309,28 @@ h3 {
 
 .input-group {
   width: 70%;
+}
+
+.internship_details {
+  background-color: white;
+  color: #6392ED;
+  padding: 50px;
+  box-shadow: 0px 20px 40px #5b5e83;
+  border-radius: 10px;
+}
+
+.internship_details h3 {
+  color: #6392ED;
+  font-weight: bolder;
+  border-top: 3px solid #e7e5ee;
+  margin-top: 50px;
+  padding-top: 20px;
+}
+
+.internship_details a {
+  background-color: #6392ED;
+  color: white;
+  border: none;
+  margin-top: 30px;
 }
 
