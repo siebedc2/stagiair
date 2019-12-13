@@ -8,6 +8,10 @@ class ApplyController extends Controller
 {
     public function index()
     {
+        $student = \Auth::user();
+        $internships = $student->internships()->get();
+        dd($internships);
+
         //if (\Auth::check()) {
         // juiste data van internship uit db halen en in variable $data steken
         $data['student_internship'] = \DB::table('student_internship')->where('student_id', \Auth::user()->id)->get();
