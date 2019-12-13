@@ -14,13 +14,13 @@
     <div class="container internships">
         <div class="row">
             <!-- lussen over $internships in de DB waar $i 1 internship is -->
-            @foreach ($student_internship as $key)
+            @foreach ($internships as $i)
                 <a href="/stages/{{$i->id}}" class="internship">
                     <!-- elk item van 1 internship in een html tag steken -->
-                    <h4 id="titleTeaser">{{$key->title}}</h4>
-                    <h4 id="companyTeaser">{{$key->company_id}}</h4>
+                    <h4 id="titleTeaser">{{$i->title}}</h4>
+                    <h4 id="companyTeaser">{{$i->company_id}}</h4>
                     <i class="arrow right"></i>
-                    <p id="descriptionTeaser">{{$key->description}}</p>
+                    <p id="descriptionTeaser">{{$i->description}}</p>
                 </a>
             @endforeach
         </div>
