@@ -92,27 +92,4 @@ class StudentController extends Controller
 
         return redirect('/mijnProfiel');
     }
-
-    // Student internships, de stages waar de student op heeft gesolliciteerd
-    public function applies()
-    {
-        $user['userInfo'] = Auth::user();
-
-        return view('/student/myInternships', $user);
-    }
-
-    public function applyForInternships(Request $request)
-    {
-        // data die ingegeven linken aan de db
-        $student_internship = new \App\Apply();
-        $student_internship->student_id = \Auth::user()->id;
-        $student_internship->internship_id = $request->input('id');
-        $student_internship->save();
-
-        // flash message laten zien met een alert, deze blijft er maar even staan door -> flash()
-        $request->session()->flash('message', 'Sollicitatie opgeslagen');
-
-        // als alles gelukt is gaan we redirecten naar een view
-        return view('student/myInternships');
-    }
 }
