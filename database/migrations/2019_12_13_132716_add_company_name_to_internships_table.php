@@ -22,7 +22,6 @@ class AddCompanyNameToInternshipsTable extends Migration
     public function down()
     {
         Schema::table('internships', function (Blueprint $table) {
-            $table->dropColumn('companyName');
         });
     }
 }
