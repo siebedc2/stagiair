@@ -18,7 +18,7 @@
             @if (Auth::guard('company')->check())
                 <a href="/stages">Stages zoeken</a>
                 <a href="/bedrijfsReviews">Bedrijfsreviews</a>
-                <a class="iconprofile" href="/bedrijfsProfiel">{{Auth::guard('company')->user()->email}}</a>
+                <a href="/bedrijfsProfiel"><span class="iconprofile"></span>{{Auth::guard('company')->user()->email}}</a>
                 <a href="/logout">Afmelden</a>
             
             @elseif (Auth::check()) 

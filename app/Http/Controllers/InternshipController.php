@@ -16,6 +16,7 @@ class InternshipController extends Controller
 
         //sectoren voor filters bepalen
         $data['sectors'] = \DB::table('internships')->get(['sector'])->unique();
+    
 
         // returnen van de view index waar je de html en css gaat tonen + je geeft de $data mee als argument zodat je die data ook in de frontent kan gebruiken
         return view('internship/index', $data);
@@ -27,10 +28,13 @@ class InternshipController extends Controller
     // filterquery
     public function filter($filter)
     {
-        $data['internships'] = \DB::table('internships')->where('sector', $filter)->get();
+        $data['internships'] = \App\Internship::where('sector', $filter)->get();
 
         //sectoren voor filters bepalen
         $data['sectors'] = \DB::table('internships')->get(['sector'])->unique();
+
+        // dd($data);
+        // exit();
 
         return view('internship/index', $data);
     }

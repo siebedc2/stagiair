@@ -13,7 +13,7 @@
     <form method="POST" action="{{URL::to('/search')}}" role="search" class="search">
         {{ csrf_field() }}
         <div class="input-group">
-            <input type="text" class="form-control" name="searchDescription" placeholder="Zoek stages">
+            <input type="text" class="form-control" id="search_field" name="searchDescription" placeholder="Zoek stages">
             <span class="input-group-btn">
                 <button type="submit" class="btn btn-search">Stages zoeken</button>
             </span>
@@ -35,7 +35,7 @@
                 @endforeach
                 <a href="/stages/">Reset</a>
             </div>
-            <div class="row">
+            <div class="intern_grid">
                 <!-- lussen over $internships in de DB waar $i 1 internship is -->
                 @foreach ($internships as $i)
                 <a href="/stages/{{$i->id}}" class="internship">
