@@ -25,6 +25,10 @@ Route::get('/', 'HomeController@index');
 Route::get('/stages', 'InternshipController@index');
 // List with all internships based on search
 Route::post('/search', 'InternshipController@search');
+
+// List after filter
+Route::get('stages/filter/{filter}', 'InternshipController@filter');
+
 // Show detail page of an internship
 Route::get('/stages/{id}', 'InternshipController@details');
 // Internship aanmaken door bedrijven
