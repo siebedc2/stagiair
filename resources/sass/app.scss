@@ -194,8 +194,12 @@ h2 {
     padding: 5px;
 }
 
+.reviews {
+    margin: 20px 0;
+}
+
 // 1 item van een stage
-.internship {
+.internship, .review {
     display: block;
     width: 800px;
     text-decoration: none;
@@ -204,11 +208,35 @@ h2 {
     padding: 5px;
 }
 
-.internship:hover {
+.internship:hover, .review:hover {
     background-color: $grey;
     text-decoration: none;
     color: black;
     border: 4px solid $blue;
+}
+
+.review {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.review p:nth-child(1) {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.review p:nth-child(2) {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.review p:nth-child(3) {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.review p:nth-child(4) {
+    grid-area: 2 / 1 / 3 / 4;
 }
 
 h4 {

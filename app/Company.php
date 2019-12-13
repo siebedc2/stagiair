@@ -44,4 +44,10 @@ class Company extends Authenticatable
         // Relations, een company heeft meerdere internships maar een internship behoort maar toe aan 1 company
         return $this->hasMany('\App\Internship');
     }
+
+    public function reviews()
+    {
+        // ManyToMany relatie
+        return $this->belongsToMany('\App\Review');
+    }
 }

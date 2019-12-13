@@ -1,4 +1,3 @@
-
 @extends('layouts/app')
 
 @section('title')
@@ -15,15 +14,16 @@
 
     <div class="container reviews">
         <div class="row">
-            <!-- lussen over $internships in de DB waar $i 1 internship is -->
-            @foreach ($reviews as $review)
             <div class="reviews">
-                <h4 id="stars">{{$review->stars}}</h4>
-                <h4 id="description">{{$review->description}}</h4>
-                <p>{{$review->student_id}}</p>
-                <p>{{$review->company_id}}</p>
+                @foreach ($reviews as $review)
+                    <div class="review">
+                        <p id="stars">{{$review->stars}}</p>    
+                        <p>{{$review->students->firstName . " " . $review->students->lastName }}</p>
+                        <p>{{$review->companies->name}}</p>
+                        <p id="description">{{$review->description}}</p>
+                </div>
+                @endforeach
             </div>
-            @endforeach
         </div>
     </div>
     
