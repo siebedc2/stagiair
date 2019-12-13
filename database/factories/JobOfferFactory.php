@@ -14,6 +14,6 @@ $factory->define(\App\Internship::class, function (Faker $faker) {
         'company_id' => $faker->numberBetween($min = 0, $max = 10),
         'active' => $faker->boolean,
         'sector' => $faker->realText(15),
-        'companyName' => $faker->realText(8),
+        'companyName' => $faker->realText(10),
     ];
 });
