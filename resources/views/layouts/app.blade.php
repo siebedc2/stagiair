@@ -24,7 +24,7 @@
             @elseif (Auth::check()) 
                 <a href="/stages">Stages zoeken</a>
                 <a href="/bedrijfsReviews">Bedrijfsreviews</a>
-                <a class="iconprofile" href="/mijnProfiel">{{Auth::user()->email}}</a>
+                <a href="/mijnProfiel"><span class="iconprofile"></span>{{Auth::user()->email}}</a>
                 <a href="/logout">Afmelden</a>
             
 

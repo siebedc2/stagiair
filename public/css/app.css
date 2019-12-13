@@ -13,7 +13,7 @@ a {
 #logo {
   text-decoration: none;
   color: white;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .stagiair_header {
@@ -58,7 +58,10 @@ nav a:hover:after {
 }
 
 nav .iconprofile {
-  width: 160px;
+  display: inline-block;
+  width: 15px;
+  height: 18px;
+  margin-right: 3px;
   text-align: right;
   background-image: url(/images/user.png?af45648e4a492d0dc4ff63bb77e85173);
   background-repeat: no-repeat;
