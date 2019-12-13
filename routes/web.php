@@ -25,10 +25,15 @@ Route::get('/', 'HomeController@index');
 Route::get('/stages', 'InternshipController@index');
 // List with all internships based on search
 Route::post('/search', 'InternshipController@search');
+<<<<<<< HEAD
 
 // List after filter
 Route::get('stages/filter/{filter}', 'InternshipController@filter');
 
+||||||| merged common ancestors
+
+=======
+>>>>>>> 3316d2fecb07618a3cb670a4ebc2eaad4794eb08
 // Show detail page of an internship
 Route::get('/stages/{id}', 'InternshipController@details');
 // Internship aanmaken door bedrijven
