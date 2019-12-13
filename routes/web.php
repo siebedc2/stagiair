@@ -36,9 +36,6 @@ Route::get('/stageAanmaken', 'InternshipController@create');
 // Versturen van data ingegeven bij het aanmaken van een intership door middel van post
 Route::post('/stages', 'InternshipController@store');
 
-// BEDRIJVEN
-// List with all companies
-Route::get('/bedrijven', 'CompanyController@index');
 // Show detail page of a company
 Route::get('/bedrijven/{id}', 'CompanyController@details');
 // Company register
