@@ -350,6 +350,7 @@ h3 {
   margin-top: 30px;
 }
 
+<<<<<<< HEAD
 .filter {
   background: white;
   padding: 25px;
@@ -375,3 +376,11 @@ h3 {
   border-radius: 4px;
 }
 
+||||||| merged common ancestors
+=======
+.hiddenInternship_id {
+  visibility: hidden;
+  width: 0px;
+}
+
+>>>>>>> acb4d6bacdd808bf3258da6a6cfd82c462e06a16
