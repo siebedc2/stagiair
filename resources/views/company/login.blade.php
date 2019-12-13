@@ -28,10 +28,10 @@ Login
             
             <input name="password" type="password" class="form-control" id="password" placeholder="Geef jouw wachtwoord in...">
         </div>
-        <div class="form-group form-check check">
+        {{-- <div class="form-group form-check check">
             <input type="checkbox" class="form-check-input" id="remember">
             <label class="form-check-label" for="remember">Onthoud mij</label>
-        </div>
+        </div> --}}
         
   
 
