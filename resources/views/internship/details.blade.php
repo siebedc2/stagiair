@@ -26,15 +26,16 @@
 
     <!-- als de student ingelogd is kan hij solliciteren op de stage, zoniet (else) dan wordt hij geriderect naar de inlog pagina -->
     @auth
-        <form method="post" action="/mijnProfiel/mijnSollicitaties">
+        <!-- <form method="post" action="/mijnProfiel/mijnSollicitaties">
             {{ csrf_field() }}
-            <input value="{{ request()->route('id') }}" name=id />
 
             <button type="submit" class="btn btn-primary">Solliciteer</button>
-        </form>
+        </form> -->
+
+        <a href="/mijnProfiel/mijnSollicitaties/{{$internship->id}}" class="btn btn-success">Solliciteer</a>
 
     @else
-        <a   type="submit" href="/student/login" class="btn btn-success">Login om te solliciteren</a>
+        <a type="submit" href="/student/login" class="btn btn-false">Login als student om te solliciteren</a>
 
     @endauth
 

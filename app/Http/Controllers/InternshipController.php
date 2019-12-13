@@ -96,13 +96,17 @@ class InternshipController extends Controller
         return redirect('/stages');
     }
 
-    public function search(Request $request) {
+    public function search(Request $request)
+    {
         // Input van user van de zoekopdracht opvangen en in een variabele steken
         $input = $request->input('searchDescription');
 
+        //sectoren voor filters bepalen
+        $data['sectors'] = \DB::table('internships')->get(['sector'])->unique();
+
         // Met behulp van bovenstaande variabele de juiste internships uit de database halen waar de zoekopdracht van de gebruiker terug te vinden is in de beschrijving van de stage
-        $data['internships'] = \DB::table('internships')->where('description', 'LIKE', '%' . $input . '%')->get();
-        
+        $data['internships'] = \DB::table('internships')->where('description', 'LIKE', '%'.$input.'%')->get();
+
         // De corresponderende stages tonen in een view
         return view('internship/index', $data);
     }

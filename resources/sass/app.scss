@@ -55,6 +55,15 @@ nav {
         bottom: -10px;
         left: 0;
     }
+    .iconprofile{
+        width: 160px;
+        text-align: right;
+        background-image: url(../../assets/user.png);
+        background-repeat: no-repeat;
+        background-size: 15px;
+        background-position: 0px 3px;
+
+    }
 }
 .btn {
     width: 200px;
@@ -264,3 +273,4 @@ h3 {
 .input-group {
     width: 70%;
 }
+
