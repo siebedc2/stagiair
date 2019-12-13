@@ -7,16 +7,6 @@
 @section('content')
     <h1>{{ $company->name }}</h1>
 
-     <!--
-    <h2>Internships</h2>
-    @foreach($company->internships as $internship)
-        <div>{{ $internship->title }}</div>
-        <div>{{ $internship->description }}</div>
-        <br>
-    @endforeach
-    -->
-
-
     <div class="container internships">
             <div class="row">
                 <!-- lussen over $internships in de DB waar $i 1 internship is -->
