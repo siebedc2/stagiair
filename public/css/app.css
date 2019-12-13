@@ -224,9 +224,9 @@ h2 {
 }
 
 .internship:hover {
-  background-color: #fcfcfc;
+  background-color: white;
   text-decoration: none;
-  color: black;
+  color: #6392ED;
   border: 4px solid #6392ED;
 }
 
