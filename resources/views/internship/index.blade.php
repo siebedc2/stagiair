@@ -33,6 +33,7 @@
 
                     <a href="/stages/filter/{{$s->sector}}">{{$s->sector}} | </a>
                 @endforeach
+                <a href="/stages/">Reset</a>
             </div>
             <div class="row">
                 <!-- lussen over $internships in de DB waar $i 1 internship is -->
