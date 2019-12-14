@@ -18,7 +18,7 @@
             <!-- lussen over $internships in de DB waar $i 1 internship is -->
             @foreach ($reviews as $review)
             <div class="reviews">
-                <h4 id="stars">{{$review->stars}}</h4>
+                <h4 id="stars">{{$review->stars}}/5</h4>
                 <h4 id="description">{{$review->description}}</h4>
                 <p>{{$review->student_id}}</p>
                 <p>{{$review->company_id}}</p>
