@@ -1953,13 +1953,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       seen: false,
       url: [],
-      socials: []
+      socials: [],
+      name: ""
     };
   },
   mounted: function mounted() {
@@ -1991,6 +1993,13 @@ __webpack_require__.r(__webpack_exports__);
     },
     toggleIcon: function toggleIcon() {
       this.seen = !this.seen;
+    }
+  },
+  computed: {
+    cleanUrl: function cleanUrl() {
+      var original = this.socials.url;
+      console.log(original);
+      return original.split('.')[1];
     }
   }
 });
@@ -37506,12 +37515,13 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "social_vue" }, [
-    _c("a", { attrs: { href: "#" } }, [
+    _c("a", { attrs: { href: this.socials.url } }, [
       _c("i", {
-        class: "fab fa-" + _vm.socials.url,
+        class: "fab  fa-" + _vm.cleanUrl,
         attrs: { id: "social_icon" }
       }),
-      _vm._v("\n" + _vm._s(_vm.socials.url) + "\n        ")
+      _vm._v(" "),
+      _c("p", [_vm._v(_vm._s(_vm.name))])
     ]),
     _vm._v(" "),
     _c(
@@ -37524,7 +37534,7 @@ var render = function() {
           }
         }
       },
-      [_vm._v("+")]
+      [_c("i", { staticClass: "fas fa-plus", attrs: { id: "social_icon" } })]
     ),
     _vm._v(" "),
     _vm.seen
@@ -37553,6 +37563,7 @@ var render = function() {
           _c(
             "button",
             {
+              staticClass: "btn",
               on: {
                 click: function($event) {
                   $event.preventDefault()
@@ -37560,7 +37571,7 @@ var render = function() {
                 }
               }
             },
-            [_vm._v("add Social account")]
+            [_vm._v("add social account")]
           )
         ])
       : _vm._e()
@@ -51166,7 +51177,7 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\n\r\n}\r\n^\r\n      Expected \"}\".\n    ╷\n495 │ }\n    │  ^\n    ╵\n  stdin 495:2  root stylesheet\r\n      in C:\\Users\\Sam\\Desktop\\stagiair\\resources\\sass\\app.scss (line 495, column 2)\n    at runLoaders (C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\webpack\\lib\\NormalModule.js:316:20)\n    at C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\loader-runner\\lib\\LoaderRunner.js:233:18\n    at context.callback (C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at render (C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\sass-loader\\dist\\index.js:89:7)\n    at Function.call$2 (C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\sass\\sass.dart.js:54306:16)\n    at _render_closure1.call$2 (C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\sass\\sass.dart.js:33504:12)\n    at _RootZone.runBinary$3$3 (C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\sass\\sass.dart.js:19820:18)\n    at _RootZone.runBinary$3 (C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\sass\\sass.dart.js:19824:19)\n    at _FutureListener.handleError$1 (C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\sass\\sass.dart.js:18289:19)\n    at _Future__propagateToListeners_handleError.call$0 (C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\sass\\sass.dart.js:18577:40)\n    at Object._Future__propagateToListeners (C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\sass\\sass.dart.js:3484:88)\n    at _Future._completeError$2 (C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\sass\\sass.dart.js:18413:9)\n    at _AsyncAwaitCompleter.completeError$2 (C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\sass\\sass.dart.js:17812:12)\n    at Object._asyncRethrow (C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\sass\\sass.dart.js:3240:17)\n    at C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\sass\\sass.dart.js:10541:20\n    at _wrapJsFunctionForAsync_closure.$protected (C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\sass\\sass.dart.js:3263:15)\n    at _wrapJsFunctionForAsync_closure.call$2 (C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\sass\\sass.dart.js:17833:12)\n    at _awaitOnObject_closure0.call$2 (C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\sass\\sass.dart.js:17825:25)\n    at _RootZone.runBinary$3$3 (C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\sass\\sass.dart.js:19820:18)\n    at _RootZone.runBinary$3 (C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\sass\\sass.dart.js:19824:19)\n    at _FutureListener.handleError$1 (C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\sass\\sass.dart.js:18289:19)\n    at _Future__propagateToListeners_handleError.call$0 (C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\sass\\sass.dart.js:18577:40)\n    at Object._Future__propagateToListeners (C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\sass\\sass.dart.js:3484:88)\n    at _Future._completeError$2 (C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\sass\\sass.dart.js:18413:9)\n    at _Future__asyncCompleteError_closure.call$0 (C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\sass\\sass.dart.js:18503:18)\n    at Object._microtaskLoop (C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\sass\\sass.dart.js:3534:21)\n    at StaticClosure._startMicrotaskLoop (C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\sass\\sass.dart.js:3540:11)\n    at _AsyncRun__scheduleImmediateJsOverride_internalCallback.call$0 (C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\sass\\sass.dart.js:17734:21)\n    at invokeClosure (C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\sass\\sass.dart.js:1358:26)\n    at Immediate.<anonymous> (C:\\Users\\Sam\\Desktop\\stagiair\\node_modules\\sass\\sass.dart.js:1379:18)\n    at runCallback (timers.js:705:18)\n    at tryOnImmediate (timers.js:676:5)\n    at processImmediate (timers.js:658:5)");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 
