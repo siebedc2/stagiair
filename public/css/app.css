@@ -236,6 +236,11 @@ h2 {
   font-style: italic;
 }
 
+.myInfo__info h4 {
+  position: absolute;
+  margin-top: 40px;
+}
+
 .headOfInfo {
   display: -webkit-box;
   display: flex;
@@ -449,6 +454,7 @@ h3 {
 }
 
 .social_vue {
+  margin-top: 50px;
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;

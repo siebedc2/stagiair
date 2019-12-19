@@ -212,6 +212,10 @@ h2 {
         color: lighten($color: black, $amount: 20%);
         font-style: italic;
     }
+    h4 {
+        position: absolute;
+        margin-top: 40px;
+    }
 }
 
 .headOfInfo {
@@ -437,6 +441,7 @@ h3 {
     border: none;
 }
 .social_vue {
+    margin-top: 50px;
     display: flex;
     align-items: center;
     color: white;
