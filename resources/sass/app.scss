@@ -232,6 +232,12 @@ h2 {
     margin: 50px 0;
     padding: 5px;
 }
+.intern_grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
 
 .reviews {
     margin: 20px 0;
@@ -240,6 +246,7 @@ h2 {
 // 1 item van een stage
 .internship, .review {
     display: block;
+    min-height: 200px;
     width: 800px;
     text-decoration: none;
     color: white;
