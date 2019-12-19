@@ -112,13 +112,15 @@ nav .iconprofile {
 }
 
 .home {
-  margin-top: 100px;
+  position: absolute;
+  top: 30%;
+  left: 100px;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
-  width: 70%;
+  width: 60%;
 }
 
 .home p {

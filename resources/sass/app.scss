@@ -101,10 +101,12 @@ nav {
 //home
 
 .home {
-    margin-top: 100px;
+    position: absolute;
+    top: 30%;
+    left: 100px;
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 60%;
     p {
         width: 75%;
     }

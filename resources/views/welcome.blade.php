@@ -21,7 +21,7 @@
             <div class="btn btn--stage"><a href="/stages">Zoek jouw stage!</a></div>
         @endif
 
-        <p>Stagiair is een hub van al je online accounts die je kunnen helpen voor een stagee op maat. We streven ernaar om een perfecte
+        <p>Stagiair is een hub van al je online accounts die je kunnen helpen voor een stage op maat. We streven ernaar om een perfecte
             match te vinden tussen student en bedrijf. 
             Je avontuur start hier, waar wacht je nog op?
         </p>
