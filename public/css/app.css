@@ -521,7 +521,7 @@ h3 {
 }
 
 @media only screen and (max-width: 1150px) {
-  .applications_buttons .btn-alert:hover .illustration {
+  .illustration {
     display: none;
   }
 }
