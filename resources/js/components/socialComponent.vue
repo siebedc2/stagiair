@@ -62,9 +62,11 @@ import axios from 'axios';
             computed: {
                 cleanUrl() {
                     const original = this.socials.url;
-                    console.log(original);
-                    return original.split('.')[1];
-                }
+                    if (original) {
+                        return original.split('.')[1];
+                        }
+                    }
+                    
             }
     }
 </script>

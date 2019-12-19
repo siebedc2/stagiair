@@ -1998,8 +1998,10 @@ __webpack_require__.r(__webpack_exports__);
   computed: {
     cleanUrl: function cleanUrl() {
       var original = this.socials.url;
-      console.log(original);
-      return original.split('.')[1];
+
+      if (original) {
+        return original.split('.')[1];
+      }
     }
   }
 });
@@ -51188,8 +51190,8 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/cesarpeeters/Documents/IMD/3de jaar/PHP2/stagiair/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/cesarpeeters/Documents/IMD/3de jaar/PHP2/stagiair/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Sam\Desktop\stagiair\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Sam\Desktop\stagiair\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
