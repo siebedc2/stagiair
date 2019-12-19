@@ -8,6 +8,8 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+import store from './store/store';
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -20,6 +22,7 @@ window.Vue = require('vue');
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('stage-component', require('./components/StageComponent.vue').default);
+Vue.component('filly', require('./components/filterComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -28,5 +31,6 @@ Vue.component('stage-component', require('./components/StageComponent.vue').defa
  */
 
 const app = new Vue({
+    store,
     el: '#app',
 });

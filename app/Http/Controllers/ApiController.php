@@ -11,4 +11,18 @@ class ApiController extends Controller
         $data = \App\Internship::all();
         return response()->json($data);
     }
+
+    public function sectorIndex() {
+        $data = \DB::table('internships')->get(['sector'])->unique();
+        return response()->json($data);
+    }
+
+    public function filter($sector) {
+        $data = \App\Internship::where('sector', $sector)->get();
+
+        // dd($data);
+        // exit();
+        
+        return response()->json($data);
+    }
 }

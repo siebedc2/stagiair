@@ -16,24 +16,16 @@ import axios from 'axios';
     export default {
            data() {
             return {
-                stages: []
+                
             }
         },
         mounted() {
-            console.log('Component mounted.');
-            this.getStages();
+            this.$store.dispatch('GET_STAGES');
         },
-        methods: {
-            getStages() {
-                axios.get('/api/stages')
-                    .then(res => {
-                        this.stages = res.data;
-                    })
-                    .catch(err => {
-                        console.error(err);
-                    });
+        computed: {
+            stages() {
+                return this.$store.state.stages;
             }
         }
-            
     }
 </script>
