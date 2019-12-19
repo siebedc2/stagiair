@@ -429,6 +429,35 @@ h3 {
   width: 500px;
 }
 
+#social_icon {
+  border: none;
+}
+
+.social_vue {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  color: white;
+}
+
+.social_vue a {
+  color: white;
+}
+
+.social_vue i,
+.social_vue div i {
+  font-size: 40px;
+}
+
+.social_vue .input_social {
+  border-radius: 4px;
+}
+
+.social_vue .input_social input {
+  margin-bottom: 10px;
+}
+
 @media only screen and (max-width: 1150px) {
   .illustration {
     display: none;

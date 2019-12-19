@@ -71,6 +71,9 @@ Route::post('/mijnProfiel/instellingen', 'StudentController@change');
 // SOLLICITATIES
 // internship_id halen uit de route van stage waarop de student solliciteert
 Route::post('/mijnProfiel/mijnSollicitaties', 'ApplyController@store');
+
+Route::post('/stages/{id}', 'ApplyController@changeConfirmed');
+
 // Tonen van alle stages waarop je al gesolliciteerd hebt
 Route::get('/mijnProfiel/mijnSollicitaties', 'ApplyController@index');
 
@@ -86,6 +89,10 @@ Route::post('/schrijfReview', 'CompanyController@handleMakeReview');
 Route::get('/logout', 'HomeController@logout');
 
 // API
+//stages
 Route::get('/api/stages', 'ApiController@index');
 Route::get('/api/sectors', 'ApiController@sectorIndex');
 Route::get('/api/filter/{sector}', 'ApiController@filter');
+//profiel
+Route::post('/api/profile/', 'ApiController@store');
+Route::get('/api/media/', 'ApiController@indexUrl');

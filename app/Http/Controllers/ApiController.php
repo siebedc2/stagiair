@@ -19,9 +19,22 @@ class ApiController extends Controller
 
     public function filter($sector) {
         $data = \App\Internship::where('sector', $sector)->get();
+        return response()->json($data);
+    }
+    public function store(Request $request) {
+        $url = $request->input('url');
+        
+        $user_id = Auth::id();
+        $student = \App\Student::find($user_id);
+        $student->url = $url;
+        $student->save();
 
-        // dd($data);
-        // exit();
+    }
+    public function indexUrl() {
+        $user_id = Auth::id();
+
+
+        $data = \App\Student::where('id', $user_id)->first();
         
         return response()->json($data);
     }
