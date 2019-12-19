@@ -19,6 +19,7 @@
                 <img src="http://tinygraphs.com/squares/helloworld">
                 <div class="myInfo__info">
                         <p class="school">{{$userInfo->school}}, {{$userInfo->education}}</p>
+                        <h4>Socials</h4>
                         <social></social>
                 </div>
             </div>

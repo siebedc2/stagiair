@@ -205,6 +205,8 @@ h2 {
 
 .myInfo__info {
     margin-left: 30px;
+    display: flex;
+    flex-direction: column;
     .school {
         font-size: 20px;
         color: lighten($color: black, $amount: 20%);
