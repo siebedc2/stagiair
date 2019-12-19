@@ -7,12 +7,6 @@ use Auth;
 
 class CompanyController extends Controller
 {
-    // List with all internships
-    public function index()
-    {
-            
-    }
-
     // Show detail page of a company
     public function details() 
     {
@@ -27,6 +21,13 @@ class CompanyController extends Controller
 
     public function handleRegister(Request $request)
     {
+        $company = $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'sector' => 'required',
+            'city' => 'required',
+            'password' => 'required|min:8'
+        ]);
         $company = new \App\Company();
         $company->name = $request->input('name');
         $company->email = $request->input('email');
@@ -94,12 +95,13 @@ class CompanyController extends Controller
     }
 
     public function reviews() {
-        $data['reviews'] = \DB::table('reviews')->get();
+        $data['reviews'] = \App\Review::with('companies')->orderBy('id', 'desc')->get();
         return view('review/index', $data);
     }
 
     public function makeReview() {
-        return view('review/create');
+        $data['companies'] = \App\Company::all();
+        return view('review/create', $data);
     }
 
     public function handleMakeReview(Request $request) {
@@ -112,7 +114,7 @@ class CompanyController extends Controller
         $request->flash();
 
         $review = new \App\Review();
-        $review->company_id = "1";
+        $review->company_id = $request->input('companies');
         $review->student_id = Auth::user()->id;
         $review->stars = $request->input('stars');
         $review->description = $request->input('description');

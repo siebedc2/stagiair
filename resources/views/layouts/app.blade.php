@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="{{ mix('css/app.css') }}" />
     <script defer src="{{ mix('js/app.js') }}"></script>
 
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="{{ asset('images/stagiairFavicon.png') }}" media="screen">
+
 </head>
 
 <body>

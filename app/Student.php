@@ -43,4 +43,10 @@ class Student extends Authenticatable
         // ManyToMany relatie
         return $this->belongsToMany('\App\Internship', 'student_internship', 'student_id', 'internship_id');
     }
+
+    public function reviews()
+    {
+        // ManyToMany relatie
+        return $this->belongsToMany('\App\Review');
+    }
 }

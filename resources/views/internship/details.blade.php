@@ -1,5 +1,9 @@
 @extends('layouts/internships')
 
+@section('title')
+    Detials
+@endsection
+
 @section('content')
 
 <div class="internship_details">
