@@ -38,10 +38,12 @@ class ApplyController extends Controller
     public function changeConfirmed(Request $request) {
         $id = $request->input('student_internship_id');
 
+        $intern_id = $request->route('id');
+
         $confirmation = \App\Apply::find($id);
         $confirmation->confirmed = $request->input('confirmed');
         $confirmation->save();
 
-        return redirect('/stages/'.$id);
+        return redirect('/stages/'.$intern_id);
     }
 }
