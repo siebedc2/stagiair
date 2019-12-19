@@ -32,6 +32,8 @@ class StudentController extends Controller
         $student->dateOfBirth = $request->input('dateOfBirth');
         $student->email = $request->input('email');
         $student->password = \Hash::make($request->input('password'));
+        $student->desc = "";
+        $student->url = "";
         $student->save();
 
         $this->handleLogin($request);

@@ -23,6 +23,7 @@ import store from './store/store';
 
 Vue.component('stage-component', require('./components/StageComponent.vue').default);
 Vue.component('filly', require('./components/filterComponent.vue').default);
+Vue.component('social', require('./components/socialComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
