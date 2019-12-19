@@ -18,7 +18,7 @@
                 <a href="/stages/{{$i->id}}" class="internship">
                     <!-- elk item van 1 internship in een html tag steken -->
                     <h4 id="titleTeaser">{{$i->title}}</h4>
-                    <h4 id="companyTeaser">{{$i->company_id}}</h4>
+                    <h4 id="companyTeaser">{{$i->companyName}}</h4>
                     <i class="arrow right"></i>
                     <p id="descriptionTeaser">{{$i->description}}</p>
                 </a>
