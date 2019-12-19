@@ -25,7 +25,15 @@
             match te vinden tussen student en bedrijf. 
             Je avontuur start hier, waar wacht je nog op?
         </p>
+
+        
+
     </div>
+    
+    <div class="illustration">    
+        <img  src="{{ asset('images/stagiairIllustration.png') }}" alt="stagiairIllustration">
+    </div>
+
     
     
 @endsection

@@ -106,7 +106,7 @@ nav {
     left: 100px;
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 50%;
     p {
         width: 75%;
     }
@@ -394,4 +394,32 @@ h3 {
 .hiddenInternship_id {
     visibility: hidden;
     width: 0px;
+}
+
+
+
+
+
+
+
+.illustration{
+    width: 500px;
+    position: absolute;
+    right: 8%;
+    top: 32%;
+}
+
+.illustration img{
+    width: 500px;   
+}
+
+
+
+
+@media only screen and (max-width: 1150px) {
+
+    .illustration{
+        display: none;
+    }
+
 }
