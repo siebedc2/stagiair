@@ -1,5 +1,9 @@
 @extends('layouts/internships')
 
+@section('title')
+{{$internship->title}}
+@endsection
+
 @section('content')
 
 <div class="internship_details">
@@ -23,6 +27,21 @@
     <h3>Aanbieding</h3>
 
     <p>{{$internship->offer}}</p>
+
+    <h3>Sollicitaties</h3>
+
+    @foreach ($internsConfirmed as $internConfirmed)
+    <p>{{$internConfirmed->students->firstName . " " . $internConfirmed->students->lastName}}</p>
+
+    <form method="post">
+            {{ csrf_field() }}
+
+            <input name="confirm" type="text">
+
+            <button type="submit" class="btn btn-primary">Accepteren</button>
+    </form>
+    
+    @endforeach
 
     <!-- als de student ingelogd is kan hij solliciteren op de stage, zoniet (else) dan wordt hij geriderect naar de inlog pagina -->
     @auth

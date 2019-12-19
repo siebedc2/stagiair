@@ -21,7 +21,7 @@ class CompanyController extends Controller
 
     public function handleRegister(Request $request)
     {
-        $company = new \App\Company();
+
         $company = $request->validate([
             'name' => 'required',
             'email' => 'required|email',
@@ -29,6 +29,8 @@ class CompanyController extends Controller
             'city' => 'required',
             'password' => 'required|min:8'
         ]);
+
+        $company = new \App\Company();
         $company->name = $request->input('name');
         $company->email = $request->input('email');
         $company->sector = $request->input('sector');
