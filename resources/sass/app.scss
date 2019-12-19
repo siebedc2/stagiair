@@ -440,6 +440,7 @@ h3 {
         display: none;
     }
 
+
 .applications {
     display: flex;
     flex-wrap: wrap;
@@ -479,5 +480,42 @@ h3 {
 .applications_buttons .btn-alert:hover {
     background-color: red;
     color: white;
+
+.active {
+    text-decoration: underline;
+    color: black;
+    font-size: 20px;
+    span {
+        color: blue;
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+.illustration{
+    width: 500px;
+    position: absolute;
+    right: 6%;
+    top: 32%;
+}
+
+.illustration img{
+    width: 500px;   
+}
+
+
+}
+
+@media only screen and (max-width: 1150px) {
+
+    .illustration{
+        display: none;
+    }
+
 }
 }

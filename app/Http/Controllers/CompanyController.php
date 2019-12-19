@@ -21,6 +21,13 @@ class CompanyController extends Controller
 
     public function handleRegister(Request $request)
     {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 71fb0852071226d4f5a1537e542f287b1957bc5c
+>>>>>>> feature/internconfirm
         $company = $request->validate([
             'name' => 'required',
             'email' => 'required|email',
@@ -28,6 +35,13 @@ class CompanyController extends Controller
             'city' => 'required',
             'password' => 'required|min:8'
         ]);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 71fb0852071226d4f5a1537e542f287b1957bc5c
+>>>>>>> feature/internconfirm
         $company = new \App\Company();
         $company->name = $request->input('name');
         $company->email = $request->input('email');
