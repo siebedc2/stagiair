@@ -15,7 +15,6 @@ class StudentController extends Controller
 
     public function handleRegister(Request $request)
     {
-        $student = new \App\Student();
         $student = $request->validate([
             'firstName' => 'required',
             'lastName' => 'required',
@@ -25,6 +24,7 @@ class StudentController extends Controller
             'email' => 'required|email',
             'password' => 'required|min:8'
         ]);
+        $student = new \App\Student();
         $student->firstName = $request->input('firstName');
         $student->lastName = $request->input('lastName');
         $student->school = $request->input('school');

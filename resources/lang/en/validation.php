@@ -151,7 +151,9 @@ return [
         'lastName' => 'achternaam',
         'education' => 'opleiding',
         'dateOfBirth' => 'geboortedatum',
-        'password' => 'wachtwoord'
+        'password' => 'wachtwoord',
+        'name' => 'bedrijfsnaam',
+        'city' => 'plaats'
     ],
 
 ];
