@@ -1,13 +1,14 @@
 <template>
     <div class="social_vue">
-        <a href="#">
-            <i :class="'fab fa-' + socials.url" id="social_icon"></i>
-    {{socials.url}}
+        <a :href="this.socials.url">
+            <i :class="'fab  fa-' + cleanUrl" id="social_icon"></i>
+            <p>{{name}}</p>
+    <!-- {{socials.url}} -->
             </a>
-        <div v-on:click.prevent="toggleIcon">+</div>
+        <div v-on:click.prevent="toggleIcon"><i class="fas fa-plus" id="social_icon"></i></div>
         <div class="input_social" v-if="seen">
             <input v-model="url" placeholder="add social url">
-            <button v-on:click.prevent="storeUrl">add Social account</button>
+            <button v-on:click.prevent="storeUrl" class="btn">add social account</button>
         </div>
         
     </div>
@@ -21,12 +22,12 @@ import axios from 'axios';
                 seen: false,
                 url: [],
                 socials: [],
+                name: "",
             }
         },
         mounted() {
            console.log("mounted");
            this.getSocials();
-
         },
         methods: {
             getSocials() {
@@ -57,6 +58,13 @@ import axios from 'axios';
             toggleIcon: function() {
                 this.seen = !this.seen;
                 }
-        }
+        },
+            computed: {
+                cleanUrl() {
+                    const original = this.socials.url;
+                    console.log(original);
+                    return original.split('.')[1];
+                }
+            }
     }
 </script>
