@@ -37550,7 +37550,7 @@ var render = function() {
                 expression: "url"
               }
             ],
-            attrs: { placeholder: "add social url" },
+            attrs: { placeholder: "bv. https://www.instagram.com/uwaccount" },
             domProps: { value: _vm.url },
             on: {
               input: function($event) {
@@ -37573,7 +37573,7 @@ var render = function() {
                 }
               }
             },
-            [_vm._v("add social account")]
+            [_vm._v("Voeg sociale media toe")]
           )
         ])
       : _vm._e()

@@ -7,8 +7,8 @@
             </a>
         <div v-on:click.prevent="toggleIcon"><i class="fas fa-plus" id="social_icon"></i></div>
         <div class="input_social" v-if="seen">
-            <input v-model="url" placeholder="add social url">
-            <button v-on:click.prevent="storeUrl" class="btn">add social account</button>
+            <input v-model="url" placeholder="bv. https://www.instagram.com/uwaccount">
+            <button v-on:click.prevent="storeUrl" class="btn">Voeg sociale media toe</button>
         </div>
         
     </div>
