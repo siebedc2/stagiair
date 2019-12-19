@@ -21,6 +21,7 @@
                         <p class="school">{{$userInfo->school}}, {{$userInfo->education}}</p>
                         <h4>Socials</h4>
                         <social></social>
+                        <a href="/mijnProfiel/mijnSollicitaties" class="btn">Bekijk jouw sollicitaties!</a>
                 </div>
             </div>
         </div>
