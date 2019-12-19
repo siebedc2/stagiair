@@ -34,4 +34,14 @@ class ApplyController extends Controller
         // zorgen dat de juiste view wordt getoont
         return redirect('/mijnProfiel/mijnSollicitaties');
     }
+
+    public function changeConfirmed(Request $request) {
+        $id = $request->input('student_internship_id');
+
+        $confirmation = \App\Apply::find($id);
+        $confirmation->confirmed = $request->input('confirmed');
+        $confirmation->save();
+
+        return redirect('/stages/'.$id);
+    }
 }

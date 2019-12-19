@@ -74,6 +74,8 @@ Route::post('/mijnProfiel/mijnSollicitaties', 'ApplyController@store');
 // Tonen van alle stages waarop je al gesolliciteerd hebt
 Route::get('/mijnProfiel/mijnSollicitaties', 'ApplyController@index');
 
+Route::post('/mijnProfiel/mijnSollicitaties', 'ApplyController@changeConfirmed');
+
 // REVIEWS
 // Company reviews
 Route::get('/bedrijfsReviews', 'CompanyController@reviews');

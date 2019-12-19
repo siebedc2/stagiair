@@ -33,13 +33,32 @@
     @foreach ($internsConfirmed as $internConfirmed)
     <p>{{$internConfirmed->students->firstName . " " . $internConfirmed->students->lastName}}</p>
 
-    <form method="post">
+    @if ($internConfirmed->confirmed == 0)
+    <!-- Student accepteren -->
+    <form method="post" action="/mijnProfiel/mijnSollicitaties">
             {{ csrf_field() }}
 
-            <input name="confirm" type="text">
+            <textarea name="student_internship_id" class="hiddenInternship_id">{{$internConfirmed->id}}</textarea>
+
+            <textarea name="confirmed" class="hiddenInternship_id">1</textarea>
 
             <button type="submit" class="btn btn-primary">Accepteren</button>
     </form>
+
+    <!-- Student weigeren -->
+    <form method="post" action="/mijnProfiel/mijnSollicitaties">
+            {{ csrf_field() }}
+
+            <textarea name="student_internship_id" class="hiddenInternship_id">{{$internConfirmed->id}}</textarea>
+
+            <textarea name="confirmed" class="hiddenInternship_id">0</textarea>
+
+            <button type="submit" class="btn btn-primary">Weigeren</button>
+    </form>
+
+    @else
+    <p>Geaccepteerd</p>
+    @endif
     
     @endforeach
 
