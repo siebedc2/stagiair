@@ -15,6 +15,15 @@ class StudentController extends Controller
 
     public function handleRegister(Request $request)
     {
+        $student = $request->validate([
+            'firstName' => 'required',
+            'lastName' => 'required',
+            'school' => 'required',
+            'education' => 'required',
+            'dateOfBirth' => 'required',
+            'email' => 'required|email',
+            'password' => 'required|min:8'
+        ]);
         $student = new \App\Student();
         $student->firstName = $request->input('firstName');
         $student->lastName = $request->input('lastName');
@@ -23,6 +32,8 @@ class StudentController extends Controller
         $student->dateOfBirth = $request->input('dateOfBirth');
         $student->email = $request->input('email');
         $student->password = \Hash::make($request->input('password'));
+        $student->desc = "";
+        $student->url = "";
         $student->save();
 
         $this->handleLogin($request);
@@ -91,31 +102,5 @@ class StudentController extends Controller
         $request->session()->flash('message', 'Info changed!');
 
         return redirect('/mijnProfiel');
-    }
-
-    // Student internships, de stages waar de student op heeft gesolliciteerd
-    public function applies()
-    {
-        $user['userInfo'] = Auth::user();
-
-        return view('/student/myInternships', $user);
-    }
-
-    public function store(Request $request)
-    {
-        $request->flash();
-
-        // data die ingegeven linken aan de db
-        $apply_internship = new \App\Apply();
-        $apply_internship->students_id = \Auth::user()->id;
-        $apply_internship->internships_id = '2';
-        $apply_internship->active = true;
-        $apply_internship->save();
-
-        // flash message laten zien met een alert, deze blijft er maar even staan door -> flash()
-        $request->session()->flash('message', 'Sollicitatie opgeslagen');
-
-        // als alles gelukt is gaan we redirecten
-        return redirect('/mijnProfiel/mijnSollicitaties');
     }
 }

@@ -16,7 +16,32 @@ a {
 #logo {
         text-decoration: none;
         color: white;
-        font-size: 20px;
+        font-size: 30px;
+}
+
+#logo:before {
+    content: '[';
+    color: white;
+    margin-right: 5px;
+    opacity: 0;
+    display: inline-block;
+    transition: transform 0.3s, opacity 0.2s;
+}
+#logo:after {
+    content: ']';
+    color: white;
+    margin-left: 5px;
+    opacity: 0;
+    display: inline-block;
+    transition: transform 0.3s, opacity 0.2s;
+}
+#logo:hover:after {
+    opacity: 1;
+    transform: translateX(10px);
+}
+#logo:hover:before {
+    opacity: 1;
+    transform: translateX(-10px);
 }
 
 .stagiair_header {
@@ -55,6 +80,18 @@ nav {
         bottom: -10px;
         left: 0;
     }
+    .iconprofile{
+        display: inline-block;
+        width: 15px;
+        height: 18px;
+        margin-right: 3px;
+        text-align: right;
+        background-image: url(../../assets/user.png);
+        background-repeat: no-repeat;
+        background-size: 15px;
+        background-position: 0px 3px;
+
+    }
 }
 .btn {
     width: 200px;
@@ -64,10 +101,12 @@ nav {
 //home
 
 .home {
-    margin-top: 100px;
+    position: absolute;
+    top: 25%;
+    left: 100px;
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 50%;
     p {
         width: 75%;
     }
@@ -166,10 +205,16 @@ h2 {
 
 .myInfo__info {
     margin-left: 30px;
+    display: flex;
+    flex-direction: column;
     .school {
         font-size: 20px;
         color: lighten($color: black, $amount: 20%);
         font-style: italic;
+    }
+    h4 {
+        position: absolute;
+        margin-top: 40px;
     }
 }
 
@@ -193,22 +238,59 @@ h2 {
     margin: 50px 0;
     padding: 5px;
 }
+.intern_grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.reviews {
+    margin: 20px 0;
+}
 
 // 1 item van een stage
-.internship {
+.internship, .review {
     display: block;
+    min-height: 200px;
     width: 800px;
     text-decoration: none;
     color: white;
-    border: 4px solid $darkgrey;
+    border: 4px solid whitesmoke;
     padding: 5px;
+    margin-bottom: 10px;
+    width: 45%;
 }
 
-.internship:hover {
+.internship:hover, .review:hover {
     background-color: $grey;
     text-decoration: none;
-    color: black;
+    color: $blue;
     border: 4px solid $blue;
+}
+
+.review {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
+.review p:nth-child(1) {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.review p:nth-child(2) {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.review p:nth-child(3) {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.review p:nth-child(4) {
+    grid-area: 2 / 1 / 3 / 4;
 }
 
 h4 {
@@ -259,4 +341,170 @@ i {
 h3 {
     margin-top: 30px;
     color: #383838;
+}
+
+.input-group {
+    width: 70%;
+}
+
+
+// STAGE DETAILS
+
+.internship_details {
+    background-color: white;
+    color: $blue;
+    padding: 50px;
+    box-shadow: 0px 20px 40px rgb(91, 94, 131);
+    border-radius: 10px;
+    p {
+        color: black;
+    }
+    margin-bottom: 50px;
+}
+
+.internship_details h3 {
+    color: $blue;
+    font-weight: bolder;
+    border-top: 3px solid rgb(231, 229, 238);
+    margin-top: 50px;
+    padding-top: 20px;
+    
+}
+
+.internship_details a {
+    background-color: $blue;
+    color: white;
+    border: none;
+    margin-top: 30px;
+}
+
+.filter {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+//search bar 
+
+.search {
+    margin-top: 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+    div {
+        width: 100%;
+        input {
+            margin-right: 200px;
+        }
+    }
+}
+
+#search_field {
+    border-radius: 4px;
+}
+
+
+// versturen van internship id via hidden p
+.hiddenInternship_id {
+    visibility: hidden;
+    width: 0px;
+}
+
+.active {
+    text-decoration: underline;
+    color: black;
+    font-size: 20px;
+    span {
+        color: blue;
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+.illustration{
+    width: 500px;
+    position: absolute;
+    right: 6%;
+    top: 32%;
+}
+
+.illustration img{
+    width: 500px;   
+}
+
+#social_icon {
+    border: none;
+}
+.social_vue {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    color: white;
+    a {
+        color: white;
+    }
+    i, div i {
+        font-size: 40px;
+    }
+    .input_social {
+        border-radius: 4px;
+        input {
+            margin-bottom: 10px;
+        }
+    }
+} 
+
+
+.applications {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.applications_buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.applications_buttons form {
+    margin-top: -40px;
+}
+
+.applications_buttons .btn-accept {
+    color: green;
+    border: 1px solid green;
+    background-color: white;
+    transition: all .3s ease;
+}
+
+.applications_buttons .btn-alert {
+    color: red;
+    border: 1px solid red;
+    background-color: white;
+    transition: all .3s ease;
+}
+
+.applications_buttons .btn-accept:hover {
+    background-color: green;
+    color: white;
+}
+
+.applications_buttons .btn-alert:hover {
+    background-color: red;
+    color: white;
+
+}
+@media only screen and (max-width: 1150px) {
+
+    .illustration{
+        display: none;
+    }
+
 }
