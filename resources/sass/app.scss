@@ -440,4 +440,44 @@ h3 {
         display: none;
     }
 
+.applications {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 75%;
+}
+
+.applications_buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.applications_buttons form {
+    margin-top: -40px;
+}
+
+.applications_buttons .btn-accept {
+    color: green;
+    border: 1px solid green;
+    background-color: white;
+    transition: all .3s ease;
+}
+
+.applications_buttons .btn-alert {
+    color: red;
+    border: 1px solid red;
+    background-color: white;
+    transition: all .3s ease;
+}
+
+.applications_buttons .btn-accept:hover {
+    background-color: green;
+    color: white;
+}
+
+.applications_buttons .btn-alert:hover {
+    background-color: red;
+    color: white;
+}
 }

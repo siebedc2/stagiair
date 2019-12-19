@@ -71,6 +71,9 @@ Route::post('/mijnProfiel/instellingen', 'StudentController@change');
 // SOLLICITATIES
 // internship_id halen uit de route van stage waarop de student solliciteert
 Route::post('/mijnProfiel/mijnSollicitaties', 'ApplyController@store');
+
+Route::post('/stages/{id}', 'ApplyController@changeConfirmed');
+
 // Tonen van alle stages waarop je al gesolliciteerd hebt
 Route::get('/mijnProfiel/mijnSollicitaties', 'ApplyController@index');
 

@@ -17,8 +17,7 @@ class ApplyController extends Controller
         return view('applies/myInternships', $data);
     }
 
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         // zorgen dat de message maar even blijft staan
         $request->flash();
 
@@ -26,6 +25,7 @@ class ApplyController extends Controller
         $student_internship = new \App\Apply();
         $student_internship->student_id = \Auth::user()->id;
         $student_internship->internship_id = $request->input('internship_id');
+        $student_internship->confirmed = 0;
         $student_internship->save();
 
         // flash message laten zien met een alert, deze blijft er maar even staan door -> flash()
@@ -33,5 +33,17 @@ class ApplyController extends Controller
 
         // zorgen dat de juiste view wordt getoont
         return redirect('/mijnProfiel/mijnSollicitaties');
+    }
+
+    public function changeConfirmed(Request $request) {
+        $id = $request->input('student_internship_id');
+
+        $intern_id = $request->route('id');
+
+        $confirmation = \App\Apply::find($id);
+        $confirmation->confirmed = $request->input('confirmed');
+        $confirmation->save();
+
+        return redirect('/stages/'.$intern_id);
     }
 }
