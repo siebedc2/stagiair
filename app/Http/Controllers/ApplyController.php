@@ -18,19 +18,6 @@ class ApplyController extends Controller
     }
 
     public function store(Request $request) {
-        if($request->has('form1')) {
-            $this->storeIntern($request);
-        }
-
-        else if ($request->has('form1')) {
-            $this->changeConfirmed($request);
-        }
-        
-    }
-
-
-    public function storeIntern(Request $request)
-    {
         // zorgen dat de message maar even blijft staan
         $request->flash();
 
