@@ -27,26 +27,8 @@
 
     
         <div class="container internships">
-            <div class="filter">
-                <p>Filter by sector:</p>
-                @foreach ($sectors as $s)
-
-                    <a href="/stages/filter/{{$s->sector}}">{{$s->sector}} | </a>
-                @endforeach
-                <a href="/stages/">Reset</a>
-            </div>
-            <div class="intern_grid">
-                <!-- lussen over $internships in de DB waar $i 1 internship is -->
-                @foreach ($internships as $i)
-                <a href="/stages/{{$i->id}}" class="internship">
-                        <!-- elk item van 1 internship in een html tag steken -->
-                        <h4 id="titleTeaser">{{$i->title}}</h4>
-                        <h4 id="companyTeaser">{{$i->companyName}}</h4>
-                        <i class="arrow right"></i>
-                        <p id="descriptionTeaser">{{$i->description}}</p>
-                </a>
-                @endforeach
-            </div>
+                <filly></filly>
+                <stage-component></stage-component>            
         </div>
    
 

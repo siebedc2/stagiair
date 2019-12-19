@@ -12,17 +12,18 @@ class InternshipController extends Controller
     {
         //if (\Auth::check()) {
         // juiste data van internship uit db halen en in variable $data steken
-        $data['internships'] = \DB::table('internships')->get();
+        // $data['internships'] = \DB::table('internships')->get();
 
-        //sectoren voor filters bepalen
-        $data['sectors'] = \DB::table('internships')->get(['sector'])->unique();
+        // //sectoren voor filters bepalen
+        // $data['sectors'] = \DB::table('internships')->get(['sector'])->unique();
     
 
         // returnen van de view index waar je de html en css gaat tonen + je geeft de $data mee als argument zodat je die data ook in de frontent kan gebruiken
-        return view('internship/index', $data);
+        return view('internship/index');
         //} else {
         //return redirect('student/login');
         //}
+
     }
 
     // filterquery

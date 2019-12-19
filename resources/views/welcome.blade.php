@@ -20,6 +20,8 @@
             match te vinden tussen student en bedrijf. 
             Je avontuur start hier, waar wacht je nog op?
         </p>
+        <example-component></example-component>
+       
     </div>
     
     
