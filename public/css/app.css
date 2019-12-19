@@ -113,7 +113,7 @@ nav .iconprofile {
 
 .home {
   position: absolute;
-  top: 30%;
+  top: 25%;
   left: 100px;
   display: -webkit-box;
   display: flex;
@@ -431,7 +431,7 @@ h3 {
 .illustration {
   width: 500px;
   position: absolute;
-  right: 8%;
+  right: 6%;
   top: 32%;
 }
 

@@ -5,7 +5,7 @@
 @endsection
 @section('content')
     <div class="home">
-        <h1>Welkom bij stagiair!</h1>
+        <h1>Welkom bij stagiair</h1>
 
         @if (Auth::guard('company')->check())
             <h2>Wij zoeken de perfecte match met jou bedrijf</h2>
