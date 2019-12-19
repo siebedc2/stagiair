@@ -101,10 +101,12 @@ nav {
 //home
 
 .home {
-    margin-top: 100px;
+    position: absolute;
+    top: 25%;
+    left: 100px;
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 50%;
     p {
         width: 75%;
     }
@@ -230,6 +232,12 @@ h2 {
     margin: 50px 0;
     padding: 5px;
 }
+.intern_grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
 
 .reviews {
     margin: 20px 0;
@@ -238,6 +246,7 @@ h2 {
 // 1 item van een stage
 .internship, .review {
     display: block;
+    min-height: 200px;
     width: 800px;
     text-decoration: none;
     color: white;
@@ -344,6 +353,7 @@ h3 {
     p {
         color: black;
     }
+    margin-bottom: 50px;
 }
 
 .internship_details h3 {
@@ -394,6 +404,7 @@ h3 {
     width: 0px;
 }
 
+<<<<<<< HEAD
 .applications {
     display: flex;
     flex-wrap: wrap;
@@ -433,4 +444,42 @@ h3 {
 .applications_buttons .btn-alert:hover {
     background-color: red;
     color: white;
+=======
+.active {
+    text-decoration: underline;
+    color: black;
+    font-size: 20px;
+    span {
+        color: blue;
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+
+
+.illustration{
+    width: 500px;
+    position: absolute;
+    right: 6%;
+    top: 32%;
+}
+
+.illustration img{
+    width: 500px;   
+}
+
+
+
+
+@media only screen and (max-width: 1150px) {
+
+    .illustration{
+        display: none;
+    }
+
+>>>>>>> 71fb0852071226d4f5a1537e542f287b1957bc5c
 }

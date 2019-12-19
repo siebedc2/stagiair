@@ -1,5 +1,9 @@
 @extends('layouts/internships')
 
+@section('title')
+    Stage aanmaken
+@endsection
+
 @section('content')
 
     <h1>Create new Internship</h1>

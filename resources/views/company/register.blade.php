@@ -24,22 +24,22 @@ Registreren
         <form>
             <div class="form-group">
                 <label for="name">Bedrijfsnaam</label>
-                <input type="text" name="name" class="form-control" id="name" placeholder="Geef jouw bedrijfsnaam in...">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Geef jouw bedrijfsnaam in..." value="{{ old('name') }}">
             </div>
 
             <div class="form-group">
                 <label for="name">Email</label>
-                <input type="text" name="email" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Geef jouw mail in...">
+                <input type="text" name="email" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Geef jouw mail in..." value="{{ old('email') }}">
             </div>
 
             <div class="form-group">
                 <label for="name">Sector</label>
-                <input type="text" name="sector" class="form-control" id="name" placeholder="Geef jouw sector in...">
+                <input type="text" name="sector" class="form-control" id="name" placeholder="Geef jouw sector in..." value="{{ old('sector') }}">
             </div>
 
             <div class="form-group">
                 <label for="name">Plaats</label>
-                <input type="text" name="city" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Geef de plaats van jouw bedrijf in...">
+                <input type="text" name="city" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Geef de plaats van jouw bedrijf in..." value="{{ old('city') }}">
             </div>
 
             <!--<div class="form-group">

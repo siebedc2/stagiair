@@ -87,3 +87,8 @@ Route::post('/schrijfReview', 'CompanyController@handleMakeReview');
 // LOGOUT
 // Student and company logout
 Route::get('/logout', 'HomeController@logout');
+
+// API
+Route::get('/api/stages', 'ApiController@index');
+Route::get('/api/sectors', 'ApiController@sectorIndex');
+Route::get('/api/filter/{sector}', 'ApiController@filter');

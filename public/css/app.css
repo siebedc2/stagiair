@@ -112,13 +112,15 @@ nav .iconprofile {
 }
 
 .home {
-  margin-top: 100px;
+  position: absolute;
+  top: 25%;
+  left: 100px;
   display: -webkit-box;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
-  width: 70%;
+  width: 50%;
 }
 
 .home p {
@@ -253,6 +255,15 @@ h2 {
   padding: 5px;
 }
 
+.intern_grid {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
+
 .reviews {
   margin: 20px 0;
 }
@@ -260,6 +271,7 @@ h2 {
 .internship,
 .review {
   display: block;
+  min-height: 200px;
   width: 800px;
   text-decoration: none;
   color: white;
@@ -353,6 +365,7 @@ h3 {
   padding: 50px;
   box-shadow: 0px 20px 40px #5b5e83;
   border-radius: 10px;
+  margin-bottom: 50px;
 }
 
 .internship_details p {
@@ -404,6 +417,7 @@ h3 {
   width: 0px;
 }
 
+<<<<<<< HEAD
 .applications {
   display: -webkit-box;
   display: flex;
@@ -449,5 +463,33 @@ h3 {
 .applications_buttons .btn-alert:hover {
   background-color: red;
   color: white;
+=======
+.active {
+  text-decoration: underline;
+  color: black;
+  font-size: 20px;
+}
+
+.active span {
+  color: blue;
+  font-size: 16px;
+}
+
+.illustration {
+  width: 500px;
+  position: absolute;
+  right: 6%;
+  top: 32%;
+}
+
+.illustration img {
+  width: 500px;
+}
+
+@media only screen and (max-width: 1150px) {
+  .illustration {
+    display: none;
+  }
+>>>>>>> 71fb0852071226d4f5a1537e542f287b1957bc5c
 }
 
