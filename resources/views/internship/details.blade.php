@@ -34,6 +34,7 @@
 
     <!-- Enkel als je als bedrijf bent ingelogd mag je een student kunnen accepteren of weigeren -->
     @if (Auth::guard('company')->check())
+    
     <div class="applications">
     <p>{{$internConfirmed->students->firstName . " " . $internConfirmed->students->lastName}}</p>
     @if ($internConfirmed->confirmed == 0)
