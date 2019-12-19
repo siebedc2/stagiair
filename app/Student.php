@@ -49,4 +49,10 @@ class Student extends Authenticatable
         // ManyToMany relatie
         return $this->belongsToMany('\App\Review');
     }
+
+    public function applies()
+    {
+        // ManyToMany relatie
+        return $this->belongsToMany('\App\Apply');
+    }
 }

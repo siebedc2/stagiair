@@ -113,7 +113,7 @@ nav .iconprofile {
 
 .home {
   position: absolute;
-  top: 30%;
+  top: 25%;
   left: 100px;
   display: -webkit-box;
   display: flex;
@@ -417,6 +417,8 @@ h3 {
   width: 0px;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 .active {
   text-decoration: underline;
   color: black;
@@ -431,7 +433,7 @@ h3 {
 .illustration {
   width: 500px;
   position: absolute;
-  right: 8%;
+  right: 6%;
   top: 32%;
 }
 
@@ -447,5 +449,85 @@ h3 {
   .illustration {
     display: none;
   }
+=======
+=======
+>>>>>>> feature/internconfirm
+.applications {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  width: 75%;
+}
+
+.applications_buttons {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+}
+
+.applications_buttons form {
+  margin-top: -40px;
+}
+
+.applications_buttons .btn-accept {
+  color: green;
+  border: 1px solid green;
+  background-color: white;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.applications_buttons .btn-alert {
+  color: red;
+  border: 1px solid red;
+  background-color: white;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.applications_buttons .btn-accept:hover {
+  background-color: green;
+  color: white;
+}
+
+.applications_buttons .btn-alert:hover {
+  background-color: red;
+  color: white;
+<<<<<<< HEAD
+>>>>>>> feature/internconfirm
+=======
+=======
+.active {
+  text-decoration: underline;
+  color: black;
+  font-size: 20px;
+}
+
+.active span {
+  color: blue;
+  font-size: 16px;
+}
+
+.illustration {
+  width: 500px;
+  position: absolute;
+  right: 6%;
+  top: 32%;
+}
+
+.illustration img {
+  width: 500px;
+}
+
+@media only screen and (max-width: 1150px) {
+  .illustration {
+    display: none;
+  }
+>>>>>>> 71fb0852071226d4f5a1537e542f287b1957bc5c
+>>>>>>> feature/internconfirm
 }
 

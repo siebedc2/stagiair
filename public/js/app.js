@@ -51177,8 +51177,22 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 __webpack_require__(/*! C:\Users\Sam\Desktop\stagiair\resources\js\app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! C:\Users\Sam\Desktop\stagiair\resources\sass\app.scss */"./resources/sass/app.scss");
+=======
+__webpack_require__(/*! C:\Users\Siebe\OneDrive - Thomas More\Jaar 3\Semester 1\Advanced Webtech Back\stagiair\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Siebe\OneDrive - Thomas More\Jaar 3\Semester 1\Advanced Webtech Back\stagiair\resources\sass\app.scss */"./resources/sass/app.scss");
+>>>>>>> feature/internconfirm
+=======
+__webpack_require__(/*! C:\Users\Siebe\OneDrive - Thomas More\Jaar 3\Semester 1\Advanced Webtech Back\stagiair\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Siebe\OneDrive - Thomas More\Jaar 3\Semester 1\Advanced Webtech Back\stagiair\resources\sass\app.scss */"./resources/sass/app.scss");
+=======
+__webpack_require__(/*! C:\Users\Sam\Desktop\stagiair\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Sam\Desktop\stagiair\resources\sass\app.scss */"./resources/sass/app.scss");
+>>>>>>> 71fb0852071226d4f5a1537e542f287b1957bc5c
+>>>>>>> feature/internconfirm
 
 
 /***/ })
