@@ -34,30 +34,37 @@
     <p>{{$internConfirmed->students->firstName . " " . $internConfirmed->students->lastName}}</p>
 
     @if ($internConfirmed->confirmed == 0)
-    <!-- Student accepteren -->
-    <form method="post" action="/mijnProfiel/mijnSollicitaties">
-            {{ csrf_field() }}
+        <!-- Enkel als je als bedrijf bent ingelogd mag je een student kunnen accepteren of weigeren -->
+        @if (Auth::guard('company')->check())
+        <!-- Student accepteren -->
+        <form method="post" action="">
+                {{ csrf_field() }}
 
-            <textarea name="student_internship_id" class="hiddenInternship_id">{{$internConfirmed->id}}</textarea>
+                <textarea name="student_internship_id" class="hiddenInternship_id">{{$internConfirmed->id}}</textarea>
 
-            <textarea name="confirmed" class="hiddenInternship_id">1</textarea>
+                <textarea name="confirmed" class="hiddenInternship_id">1</textarea>
 
-            <button type="submit" class="btn btn-primary">Accepteren</button>
-    </form>
+                <button type="submit" name="form2" class="btn btn-primary">Accepteren</button>
+        </form>
 
-    <!-- Student weigeren -->
-    <form method="post" action="/mijnProfiel/mijnSollicitaties">
-            {{ csrf_field() }}
+        <!-- Student weigeren -->
+        <form method="post" action="">
+                {{ csrf_field() }}
 
-            <textarea name="student_internship_id" class="hiddenInternship_id">{{$internConfirmed->id}}</textarea>
+                <textarea name="student_internship_id" class="hiddenInternship_id">{{$internConfirmed->id}}</textarea>
 
-            <textarea name="confirmed" class="hiddenInternship_id">0</textarea>
+                <textarea name="confirmed" class="hiddenInternship_id">0</textarea>
 
-            <button type="submit" class="btn btn-primary">Weigeren</button>
-    </form>
+                <button type="submit" name="form2" class="btn btn-primary">Weigeren</button>
+        </form>
+
+        @else
+        <p>In behandeling...</p>
+
+        @endif
 
     @else
-    <p>Geaccepteerd</p>
+        <p>Geaccepteerd</p>
     @endif
     
     @endforeach
@@ -69,7 +76,7 @@
 
             <textarea name="internship_id" id="internship_id" class="hiddenInternship_id">{{$internship->id}}</textarea>
 
-            <button type="submit" class="btn btn-primary">Solliciteer</button>
+            <button type="submit" name="form1" class="btn btn-primary">Solliciteer</button>
         </form>
 
     @else
